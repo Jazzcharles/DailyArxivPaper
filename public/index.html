@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily arXiv CV</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Daily arXiv CV</h1>
+      <p id="meta">Loading papers...</p>
+    </div>
+    <nav>
+      <button data-view="latest" class="active">Latest</button>
+      <button data-view="favorites">Favorites</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input id="search" type="search" placeholder="Search title, keyword, summary">
+      <select id="keyword"></select>
+    </section>
+    <section id="paper-list" class="paper-list"></section>
+  </main>
+
+  <template id="paper-template">
+    <article class="paper">
+      <div class="paper-head">
+        <div>
+          <a class="title" target="_blank" rel="noreferrer"></a>
+          <p class="authors"></p>
+        </div>
+        <button class="star" title="Toggle local favorite">☆</button>
+      </div>
+      <div class="tags"></div>
+      <dl class="summary">
+        <dt>核心贡献</dt>
+        <dd class="core"></dd>
+        <dt>方法要点</dt>
+        <dd class="method"></dd>
+      </dl>
+      <footer>
+        <span class="source"></span>
+        <a class="abstract" target="_blank" rel="noreferrer">Abstract</a>
+        <a class="html" target="_blank" rel="noreferrer">HTML</a>
+        <a class="pdf" target="_blank" rel="noreferrer">PDF</a>
+      </footer>
+    </article>
+  </template>
+
+  <script src="./app-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
