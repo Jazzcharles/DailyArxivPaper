@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-19T20:03:46+00:00",
+  "generated_at_utc": "2026-05-19T21:01:05+00:00",
   "category": "cs.CV",
   "keywords": [
     "video",
@@ -13,7 +13,7 @@
   ],
   "fetch_window_hours": 72,
   "daily_window_hours": 30,
-  "match_count": 39,
+  "match_count": 29,
   "new_or_recent_papers": [
     {
       "id": "2605.18754v1",
@@ -43,7 +43,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18749v1",
@@ -81,7 +81,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18748v1",
@@ -117,7 +117,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18746v1",
@@ -154,7 +154,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18740v1",
@@ -189,7 +189,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18739v1",
@@ -233,7 +233,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18736v1",
@@ -265,7 +265,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18735v1",
@@ -294,7 +294,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18734v1",
@@ -332,7 +332,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18733v1",
@@ -368,7 +368,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18729v1",
@@ -408,7 +408,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18719v1",
@@ -442,7 +442,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T20:03:46+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18714v1",
@@ -474,7 +474,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18680v1",
@@ -509,7 +509,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18678v1",
@@ -550,7 +550,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18652v1",
@@ -585,7 +585,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18645v1",
@@ -618,7 +618,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18641v1",
@@ -655,7 +655,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18636v1",
@@ -692,7 +692,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18621v1",
@@ -728,7 +728,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18610v1",
@@ -762,7 +762,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18608v1",
@@ -795,7 +795,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T20:03:46+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18603v1",
@@ -827,7 +827,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18601v1",
@@ -868,7 +868,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18599v1",
@@ -902,7 +902,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T20:03:46+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18577v1",
@@ -937,7 +937,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18553v1",
@@ -971,7 +971,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18541v1",
@@ -1003,7 +1003,7 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     },
     {
       "id": "2605.18522v1",
@@ -1033,352 +1033,9 @@
         "status": "fallback"
       },
       "first_seen_at": "2026-05-19T20:03:46+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18507v1",
-      "title": "Weakly Supervised Cross-Modal Learning for 4D Radar Scene Flow Estimation",
-      "abstract": "Due to the difficulty of obtaining ground-truth data for 4D radar scene flow estimation, previous methods typically rely on either self-supervised losses or cross-modal supervision using 3D LiDAR data, 2D images, and odometry. However, self-supervised approaches often yield suboptimal results due to radar's inherently low-fidelity measurements, while existing cross-modal supervised methods introduce complex multi-task architecture and require costly LiDAR sensors to generate pseudo radar scene flow labels from pretrained 3D tracking models. To overcome these limitations, we propose a task-specific iterative framework for weakly supervised radar scene flow learning, using only images and odometry for auxiliary supervision during training. Specially, we establish two novel instance-aware self-supervised losses by exploiting off-the-shelf 2D tracking and segmentation algorithms to obtain tracked instance masks, which are back-projected into 3D space to provide instance-level semantic guidance; for static regions, we integrate vehicle odometry with radar's intrinsic motion cues to construct a rigid static loss. Extensive experiments on the real-world View-of-Delft (VoD) dataset demonstrate that our method not only surpasses state-of-the-art cross-modal supervised approaches that rely on 3D multi-object tracking on dense LiDAR point clouds but also outperforms existing fully supervised scene flow estimation methods. The code is open-sourced at \\href{https://github.com/FuJingyun/IterFlow}{https://github.com/FuJingyun/IterFlow}.",
-      "authors": [
-        "Jingyun Fu",
-        "Zhiyu Xiang",
-        "Na Zhao"
-      ],
-      "published": "2026-05-18T15:00:53Z",
-      "updated": "2026-05-18T15:00:53Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18507v1",
-      "html_url": "https://arxiv.org/html/2605.18507v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18507v1.pdf",
-      "matched_keywords": [
-        "3d",
-        "instance"
-      ],
-      "source_used": "html",
-      "source_text_chars": 94430,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 3d, instance 相关；摘要显示其主要贡献为：Due to the difficulty of obtaining ground-truth data for 4D radar scene flow estimation, previous methods typically rely on either self-supervised losses or cross-modal supervision using 3D LiDAR data, 2D images, and odometry. However, self-supervised approac...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:26+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18491v1",
-      "title": "Benchmarking transferability of SSL pretraining to same and different modality segmentation tasks",
-      "abstract": "Methods: Nine SSL methods spanning four pretext-task families were pretrained from scratch using the same 10{,}412 3D CT scans (1.89~M 2D axial slices) covering varied disease sites. The pretrained Swin Transformer encoder from each method was integrated into a SwinUNETR-style segmentation network (Swin encoder with a 3D CNN decoder and skip connections) and fine-tuned on nine public segmentation tasks of varying complexity, including large abdominal organs, head-and-neck structures, and tumors from CT and MRI. Performance was assessed using Dice similarity coefficient (DSC). Fine-tuning convergence speed, transferability across modalities (CT-to-MRI), and feature-reuse patterns between few- and many-shot fine tuning were further analyzed using centered kernel alignment. Results: Self-distilled masked image transformer (SMIT), which combines masked image modeling (MIM) with local and global self-distillation, achieved the highest overall segmentation accuracy across the nine tasks, the fastest fine-tuning convergence, and the smallest few-shot-to-many-shot performance gap, indicating the strongest data efficiency. SMIT also showed the most consistent feature-reuse patterns between few- and many-shot fine tuning. MIM-based SimMIM and self-distillation methods (DINO, iBOT) outperformed contrastive learning and rotation prediction, which rely on image-level global representations. Differences between SSL methods were largest in the few-shot setting and narrowed as the size of the labeled fine-tuning dataset increased, indicating that the choice of SSL pretraining matters most under limited annotation budgets.",
-      "authors": [
-        "Jue Jiang",
-        "Harini Veeraraghavan"
-      ],
-      "published": "2026-05-18T14:41:55Z",
-      "updated": "2026-05-18T14:41:55Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18491v1",
-      "html_url": "https://arxiv.org/html/2605.18491v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18491v1.pdf",
-      "matched_keywords": [
-        "3d",
-        "representation"
-      ],
-      "source_used": "html",
-      "source_text_chars": 72267,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 3d, representation 相关；摘要显示其主要贡献为：Methods: Nine SSL methods spanning four pretext-task families were pretrained from scratch using the same 10{,}412 3D CT scans (1.89~M 2D axial slices) covering varied disease sites. The pretrained Swin Transformer encoder from each method was integrated into...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:26+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18467v1",
-      "title": "InstructAV2AV: Instruction-Guided Audio-Video Joint Editing",
-      "abstract": "Recent diffusion-based methods have achieved impressive progress in video content manipulation. However, they typically ignore the accompanying audio, leaving the audio disjointed from the edited results. In this paper, we propose InstructAV2AV, the first end-to-end framework for instruction-guided audio-video joint editing. We first develop a scalable data synthesis pipeline and construct InsAVE-80K, the first large-scale audio-video editing dataset with high-quality source-to-target pairs. With this data foundation, we adapt an audio-video generation backbone to leverage its robust priors. We concatenate the audio-video input with noisy latent codes to anchor the source context, propose the source-instruction gated attention to improve instruction following and content preservation, and introduce a two-stage training strategy to effectively transfer these pre-trained priors. Extensive experiments demonstrate that InstructAV2AV outperforms state-of-the-art methods across 11 metrics spanning three aspects on two evaluation sets, highlighting its potential for controllable content creation. Project page: https://hjzheng.net/projects/InstructAV2AV/.",
-      "authors": [
-        "Haojie Zheng",
-        "Yixin Yang",
-        "Siqi Yang",
-        "Shuchen Weng",
-        "Boxin Shi"
-      ],
-      "published": "2026-05-18T14:27:05Z",
-      "updated": "2026-05-18T14:27:05Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18467v1",
-      "html_url": "https://arxiv.org/html/2605.18467v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18467v1.pdf",
-      "matched_keywords": [
-        "video",
-        "diffusion"
-      ],
-      "source_used": "html",
-      "source_text_chars": 73462,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 video, diffusion 相关；摘要显示其主要贡献为：Recent diffusion-based methods have achieved impressive progress in video content manipulation. However, they typically ignore the accompanying audio, leaving the audio disjointed from the edited results. In this paper, we propose InstructAV2AV, the first end...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:26+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18466v1",
-      "title": "Speech-Guided Multimodal Learning for Vocal Tract Segmentation in Real-Time MRI",
-      "abstract": "Segmenting vocal tract articulators in real-time MRI (rtMRI) is a challenging dynamic image segmentation problem characterized by low contrast, rapid motion, and limited spatial resolution. However, while rtMRI acquisitions may provide synchronized acoustic signals, existing methods discard this information, and the few multimodal approaches that incorporate audio cannot be deployed when audio is unavailable. We propose a three-stage framework that leverages acoustic and phonological supervision during training while requiring only the rtMRI image at inference: phonological representations are converted into spatial bounding-box priors for articulator localization, visual and acoustic encoders are aligned via dual-level cross-modal contrastive pretraining, and the learned representations are fused through a cross-attention decoder, effectively transferring multimodal knowledge into a single-modality inference pipeline. Evaluated on 75-Speaker~Annot-16 and USC-TIMIT datasets, our method outperforms existing unimodal and multimodal methods, demonstrating that multimodal supervision provides transferable benefits for precise and clinically deployable vocal tract segmentation.",
-      "authors": [
-        "Daiqi Liu",
-        "Lukas Mulzer",
-        "Md Hasan",
-        "Nyvenn de Castro",
-        "Fangxu Xing",
-        "Xingjian Kang",
-        "Chengze Ye",
-        "Siyuan Mei",
-        "Yipeng Sun",
-        "Tomás Arias-Vergara",
-        "Jana Hutter",
-        "Jonghye Woo",
-        "Andreas Maier",
-        "Paula Andrea Pérez-Toro"
-      ],
-      "published": "2026-05-18T14:26:17Z",
-      "updated": "2026-05-18T14:26:17Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18466v1",
-      "html_url": "https://arxiv.org/html/2605.18466v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18466v1.pdf",
-      "matched_keywords": [
-        "representation",
-        "multimodal"
-      ],
-      "source_used": "html",
-      "source_text_chars": 33853,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 representation, multimodal 相关；摘要显示其主要贡献为：Segmenting vocal tract articulators in real-time MRI (rtMRI) is a challenging dynamic image segmentation problem characterized by low contrast, rapid motion, and limited spatial resolution. However, while rtMRI acquisitions may provide synchronized acoustic s...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:27+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18464v1",
-      "title": "PERL: Parameter Efficient Reasoning in CLIP Latent Space",
-      "abstract": "Contrastively trained vision-language models such as CLIP provide strong zero-shot transfer by aligning images and text in a shared embedding space. However, adapting these models to downstream tasks without degrading their open-vocabulary generalization remains challenging. Existing parameter-efficient adaptation methods typically improve task specialization through learned prompts, adapters, or multimodal transformations, where adaptation capacity is primarily expressed through additional trainable parameters. Inspired by recent latent reasoning methods in language models, we investigate a complementary perspective: can adaptation emerge from iterative reasoning on latent representations rather than from increasing parameter count alone? We introduce PERL (Parameter-Efficient Reasoning in CLIP Latent Space), a lightweight adaptation framework that augments a frozen CLIP model with a compact shared reasoning module applied recurrently across refinement steps. At each step, PERL generates a latent reasoning token conditioned on the current representation and injects it into an intermediate encoder layer, progressively refining higher-level semantic representations while preserving CLIP's pretrained multimodal structure. Across 15 benchmarks spanning base-to-novel generalization, cross-dataset transfer, and out-of-distribution ImageNet variants, PERL achieves the best parameter-performance trade-off among the compared methods under a fast-adaptation few-shot setting, combining strong novel-class accuracy and competitive transfer performance with only about 6K trainable parameters, up to 817x fewer than the largest compared approach. Overall, our results suggest that iterative latent reasoning provides a complementary adaptation mechanism to parameter scaling in discriminative vision-language models.",
-      "authors": [
-        "Simone Carnemolla",
-        "Salvatore Calcagno",
-        "Daniela Giordano",
-        "Concetto Spampinato",
-        "Matteo Pennisi"
-      ],
-      "published": "2026-05-18T14:25:25Z",
-      "updated": "2026-05-18T14:25:25Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18464v1",
-      "html_url": "https://arxiv.org/html/2605.18464v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18464v1.pdf",
-      "matched_keywords": [
-        "representation",
-        "multimodal"
-      ],
-      "source_used": "html",
-      "source_text_chars": 62670,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 representation, multimodal 相关；摘要显示其主要贡献为：Contrastively trained vision-language models such as CLIP provide strong zero-shot transfer by aligning images and text in a shared embedding space. However, adapting these models to downstream tasks without degrading their open-vocabulary generalization rema...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:27+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T20:03:46+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18451v1",
-      "title": "Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis",
-      "abstract": "Designing realistic and functional 3D indoor rooms is essential for a wide range of applications, including interior design, virtual reality, gaming, and embodied AI. While recent MLLM-based approaches have shown great potential for 3D room synthesis from textual descriptions or reference images, text-based methods struggle to capture precise spatial information, and existing image-conditioned agents suffer from instability and infinite looping when tasked with holistic room generation from top-down views. To address these limitations, we propose Code-as-Room, an MLLM-based agentic framework equipped with a structured execution harness, which represents 3D rooms with Blender codes. Given a top-down room image, the framework parses the reference image to extract scene elements and their spatial relationships, and synthesizes executable Blender code for geometry, materials, and lighting in a principled, multi-stage pipeline. A cross-stage memory module is maintained throughout to mitigate context forgetting inherent to existing agent-based frameworks. We further introduce a dedicated benchmark for code-based 3D room synthesis, encompassing various evaluation protocols. Based on our benchmark, comprehensive comparisons against existing agent-based methods are conducted to validate the effectiveness of our proposed execution harness.",
-      "authors": [
-        "Yixuan Yang",
-        "Zhen Luo",
-        "Wanshui Gan",
-        "Jinkun Hao",
-        "Junru Lu",
-        "Jinghao Yan",
-        "Zhaoyang Lyu",
-        "Xudong Xu"
-      ],
-      "published": "2026-05-18T14:18:36Z",
-      "updated": "2026-05-18T14:18:36Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18451v1",
-      "html_url": "https://arxiv.org/html/2605.18451v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18451v1.pdf",
-      "matched_keywords": [
-        "3d",
-        "agent"
-      ],
-      "source_used": "html",
-      "source_text_chars": 49350,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 3d, agent 相关；摘要显示其主要贡献为：Designing realistic and functional 3D indoor rooms is essential for a wide range of applications, including interior design, virtual reality, gaming, and embodied AI. While recent MLLM-based approaches have shown great potential for 3D room synthesis from tex...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:27+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18447v1",
-      "title": "NeRF-based Spacecraft Reconstruction from Close-Range Monocular Imagery Under Illumination Variability and Pose Uncertainty",
-      "abstract": "Autonomous rendezvous and proximity operations around uncooperative, unknown spacecraft are critical for active debris removal and on-orbit servicing missions. A key component of such operations is the offline reconstruction of a 3D model of the target from a set of 2D images. This task is challenging due to two main factors. First, in-orbit illumination conditions exhibit considerable variability, and change rapidly over time. Second, the inaccuracy of pose information in the images, results in 3D reconstruction uncertainty. To overcome these challenges, we propose to extend Neural Radiance Fields with per-image degrees of freedom: a learnable appearance embedding that captures the illumination conditions specific to each image, and an image-specific pose correction term that refines its noisy pose label to increase 3D consistency across images. These parameters add minimal complexity, as they are learned jointly with the NeRF, yet they substantially improve robustness to illumination variability and pose inaccuracies. We validate our approach on three image sets representative of in-orbit operations, demonstrating its effectiveness for offline reconstruction and highlighting its suitability for online reconstruction, an open problem in the field.",
-      "authors": [
-        "Antoine Legrand",
-        "Renaud Detry",
-        "Christophe De Vleeschouwer"
-      ],
-      "published": "2026-05-18T14:17:11Z",
-      "updated": "2026-05-18T14:17:11Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18447v1",
-      "html_url": "https://arxiv.org/html/2605.18447v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18447v1.pdf",
-      "matched_keywords": [
-        "3d"
-      ],
-      "source_used": "abstract",
-      "source_text_chars": 1393,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 3d 相关；摘要显示其主要贡献为：Autonomous rendezvous and proximity operations around uncooperative, unknown spacecraft are critical for active debris removal and on-orbit servicing missions. A key component of such operations is the offline reconstruction of a 3D model of the target from a...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "abstract",
-        "created_at": "2026-05-19T20:05:27+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18445v1",
-      "title": "What is Holding Back Latent Visual Reasoning?",
-      "abstract": "Humans can approach complex visual problems by mentally simulating intermediate visual steps, rather than reasoning through language alone. Inspired by this, several works on Vision-Language Models have recently explored chain-of-thought reasoning with continuous latent tokens as intermediate visual imagination steps. In this work, we investigate how recent models leverage such latent tokens. Surprisingly, we find that model accuracy is unaffected when latent tokens are replaced by uninformative ``dummy'' tokens. This indicates that latent tokens play a minimal causal role in the model's final prediction. To better understand this phenomenon, we analyze both the training signal provided by oracle latent representations and the quality of the latent tokens generated at inference time. Our experiments reveal two crucial issues holding back latent visual reasoning: First, in most existing datasets, oracle latent tokens provide limited additional information beyond the original image and do not substantially simplify the task, leading models to ignore them during training and effectively bypassing them at inference time. When fine-tuned on a diagnostic dataset, in which latent tokens provide sufficient support for the final prediction, we show that models can causally rely on them. Second, the latent tokens produced at inference time deviate from their corresponding oracle representations, collapsing to a narrow region and preventing benefits even when the model relies on them. Overall, our findings suggest that future progress in latent visual reasoning depends on two key pillars: high-quality datasets with informative intermediate steps and more precise latent token prediction.",
-      "authors": [
-        "André G. Viveiros",
-        "Nuno Gonçalves",
-        "André F. T. Martins",
-        "Matthias Lindemann"
-      ],
-      "published": "2026-05-18T14:14:49Z",
-      "updated": "2026-05-18T14:14:49Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18445v1",
-      "html_url": "https://arxiv.org/html/2605.18445v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18445v1.pdf",
-      "matched_keywords": [
-        "representation"
-      ],
-      "source_used": "html",
-      "source_text_chars": 53068,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 representation 相关；摘要显示其主要贡献为：Humans can approach complex visual problems by mentally simulating intermediate visual steps, rather than reasoning through language alone. Inspired by this, several works on Vision-Language Models have recently explored chain-of-thought reasoning with contin...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:27+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18434v1",
-      "title": "TIGER-FG: Text-Guided Implicit Fine-Grained Grounding for E-commerce Retrieval",
-      "abstract": "E-commerce image search often takes a cropped image as the query, while each candidate is represented by full item images and structured text. This image-to-multimodal retrieval setting presents two asymmetries: a modality disparity -- a visual query must match image--text items, and a granularity disparity -- a cropped query must be compared with full images containing background context and possible distractors. Detection-based pipelines handle the granularity disparity through explicit localization but incur extra cost and error propagation, whereas CLIP-style encoders avoid detection, but are vulnerable to backgrounds or irrelevant items. To address these limitations, we propose TIGER-FG, a text-guided implicit fine-grained grounding framework for image-to-multimodal e-commerce retrieval. TIGER-FG uses item text as semantic guidance to produce target-focused item representations without object detection for retrieval. We further introduce dual distillation objectives that preserve target-region spatial consistency and query--item similarity structure, yielding more stable and discriminative multimodal representations. In addition, we construct ECom-RF-IMMR, a realistic benchmark suite with a 10M-pair training set and two evaluation benchmarks covering standard and cluttered item layouts. TIGER-FG improves Recall@1 over the strongest baseline by 6.1 and 34.4 percentage points on the two evaluation benchmarks, respectively, with only 85.7M query-side parameters and 256-dim embeddings. Results on public e-commerce benchmarks further demonstrate its generalization to noisy and one-to-many retrieval scenarios. Code and data will be released.",
-      "authors": [
-        "Xinyu Sun",
-        "Huangyu Dai",
-        "Lingtao Mao",
-        "Zexin Zheng",
-        "Zihan Liang",
-        "Ben Chen",
-        "Chenyi Lei",
-        "Wenwu Ou"
-      ],
-      "published": "2026-05-18T14:07:20Z",
-      "updated": "2026-05-18T14:07:20Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18434v1",
-      "html_url": "https://arxiv.org/html/2605.18434v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18434v1.pdf",
-      "matched_keywords": [
-        "retrieval",
-        "representation",
-        "multimodal"
-      ],
-      "source_used": "html",
-      "source_text_chars": 98547,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 retrieval, representation, multimodal 相关；摘要显示其主要贡献为：E-commerce image search often takes a cropped image as the query, while each candidate is represented by full item images and structured text. This image-to-multimodal retrieval setting presents two asymmetries: a modality disparity -- a visual query must mat...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:28+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
-    },
-    {
-      "id": "2605.18431v1",
-      "title": "Seeing Together:Multi-Robot Cooperative Egocentric Spatial Reasoning with Multimodal Large Language Models",
-      "abstract": "Multimodal Large Language Models (MLLMs) have made substantial progress in egocentric video understanding, but their ability to reason cooperatively from multiple embodied viewpoints remains largely unexplored. We study this problem through multi-robot cooperative dynamic spatial reasoning, where a model must answer spatial, temporal, visibility, and coordination questions by integrating synchronized egocentric videos from a team of moving robots. To support this setting, we introduce CoopSR, the first benchmark for this task, together with EgoTeam, a multi-robot egocentric QA dataset. EgoTeam contains 114,227 QA pairs spanning 19 question types, four difficulty tiers, and three team sizes in Habitat and iGibson, along with a real-world test set of around 2,326 QAs collected using two quadruped robots. We further propose SP-CoR (Spectral and Physics-Informed Cooperative Reasoner), an MLLM framework for fine-grained cooperative spatial reasoning. SP-CoR combines dynamics-aware multi-robot frame sampling, spectral- and physics-guided view fusion, and physics-aligned prompt distillation, enabling the model to benefit from privileged robot-pose supervision during training while requiring only egocentric videos at test time. Across 22 MLLM baselines, SP-CoR consistently improves cooperative reasoning, outperforming the strongest fine-tuned baseline by +3.87% on Habitat and +7.12% on iGibson. It also shows stronger generalization to unseen team sizes and real-world robot tests. Code can be found at https://github.com/KPeng9510/seeing-together.git.",
-      "authors": [
-        "Kunyu Peng",
-        "Zhikun Zhou",
-        "Kailun Yang",
-        "Di Wen",
-        "Ruiping Liu",
-        "Yufan Chen",
-        "Junwei Zheng",
-        "Hao Shi",
-        "Yi Zhou",
-        "M. Saquib Sarfraz",
-        "Danda Pani Paudel",
-        "Luc Van Gool"
-      ],
-      "published": "2026-05-18T14:04:26Z",
-      "updated": "2026-05-18T14:04:26Z",
-      "abstract_url": "https://arxiv.org/abs/2605.18431v1",
-      "html_url": "https://arxiv.org/html/2605.18431v1",
-      "pdf_url": "https://arxiv.org/pdf/2605.18431v1.pdf",
-      "matched_keywords": [
-        "video",
-        "multimodal"
-      ],
-      "source_used": "html",
-      "source_text_chars": 84885,
-      "summary": {
-        "model": "fallback-no-api",
-        "core_contribution": "该论文与 video, multimodal 相关；摘要显示其主要贡献为：Multimodal Large Language Models (MLLMs) have made substantial progress in egocentric video understanding, but their ability to reason cooperatively from multiple embodied viewpoints remains largely unexplored. We study this problem through multi-robot cooper...",
-        "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
-        "source_used": "html",
-        "created_at": "2026-05-19T20:05:28+00:00",
-        "status": "fallback"
-      },
-      "first_seen_at": "2026-05-19T19:53:28+00:00",
-      "last_seen_at": "2026-05-19T20:03:46+00:00"
+      "last_seen_at": "2026-05-19T21:01:05+00:00"
     }
   ],
-  "tracked_paper_count": 39,
+  "tracked_paper_count": 29,
   "storage_mode": "latest_overwrite"
 }
