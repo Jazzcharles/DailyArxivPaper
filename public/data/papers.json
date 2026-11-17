@@ -1,1 +1,1918 @@
-[]
+[
+  {
+    "id": "2611.21605v1",
+    "title": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
+    "abstract": "Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct this, because a guess earns the same reward as reading. We propose Cross-Input Relative Policy Optimization (CrossRPO), which trains agents on contrast sets. A contrast set asks one question about several versions of an image that differ only in a small region with the evidence and have different answers, so only reading the evidence solves the whole set. CrossRPO rewards solving the whole set, and we prove that it does not reinforce a set answered from common sense. We build contrast sets for training (ViRA-Train) and evaluation (ViRA-Bench) by editing one small object in images of 21 to 120 megapixels, and we photograph further sets with real changes (ViRA-Bench-Real) to exclude editing traces. We train two Visual Reasoning Agents, ViRA-9B and ViRA-27B, with CrossRPO on only about 3,500 items of ViRA-Train each. CrossRPO achieves 63.3% set accuracy on ViRA-Bench at the maximum resolution, against 59.3% for GRPO. ViRA-9B is the most accurate open model of its size on all benchmarks, and ViRA-27B outperforms Claude Haiku 5.5 and GPT-6-Luna, both at their highest thinking level, on most benchmarks.",
+    "authors": [
+      "Huawei Lin",
+      "Jinting Liu",
+      "Tongyan Wang",
+      "Xuyang Chen",
+      "Ruihua Shi",
+      "Zhichao Xu",
+      "Jiaxin Qin",
+      "Guoshenghui Zhao",
+      "Baijian Yang",
+      "Yingjie Victor Chen",
+      "Tan Yu",
+      "Weijie Zhao"
+    ],
+    "published": "2026-11-16T18:59:04Z",
+    "updated": "2026-11-16T18:59:04Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21605v1",
+    "html_url": "https://arxiv.org/html/2611.21605v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21605v1.pdf",
+    "matched_keywords": [
+      "agent"
+    ],
+    "source_used": "html",
+    "source_text_chars": 270987,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 agent 相关；摘要显示其主要贡献为：Visual agents answer questions about ultra-high-resolution photos by zooming into the relevant regions. However, existing agents often answer from common sense instead of reading the evidence. Reinforcement learning (RL) on the final answer cannot correct thi...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:23+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21604v1",
+    "title": "FaceJev: Direct Visual Decisions for Face Forgery Detection",
+    "abstract": "Face forgery detection methods often perform well on seen manipulations but generalize poorly to unseen ones. Multimodal Large Language Models (MLLMs) can recognize facial parts and assess their visual plausibility. Existing MLLM-based methods typically express these judgments through textual explanations, but seldom treat individual part decisions as explicit learning targets. We present FaceJev, an MLLM-based method for face forgery detection through direct visual decisions. Following the Jev formulation, FaceJev answers eight independent questions about facial parts using a shared image encoding and reads anomaly probabilities from the native answer logits. A face is classified as forged if any part is predicted to be abnormal, directly linking the detection result to the part decisions. We construct PartForensics, a dataset of approximately 160k images with binary anomaly targets for the eight facial parts, to supervise these decisions. We further propose FS-GRPO, which optimizes each part decision through an exact reward comparison with its alternative, using both detection and part rewards. FaceJev outperforms the strongest baseline by 7.25 percentage points on unseen manipulations. Extensive ablation studies validate our design choices and the effectiveness of the main components.",
+    "authors": [
+      "Siran Peng",
+      "Tianshuo Zhang",
+      "Yibo Xue",
+      "Ajian Liu",
+      "Haoyuan Zhang",
+      "Weisong Zhao",
+      "Shuhuan Chen",
+      "Xiangyu Zhu",
+      "Zhen Lei"
+    ],
+    "published": "2026-11-16T18:59:04Z",
+    "updated": "2026-11-16T18:59:04Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21604v1",
+    "html_url": "https://arxiv.org/html/2611.21604v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21604v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "html",
+    "source_text_chars": 49924,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 multimodal 相关；摘要显示其主要贡献为：Face forgery detection methods often perform well on seen manipulations but generalize poorly to unseen ones. Multimodal Large Language Models (MLLMs) can recognize facial parts and assess their visual plausibility. Existing MLLM-based methods typically expre...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:23+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21600v1",
+    "title": "How VLMs Plan What's Next",
+    "abstract": "When a vision-language model describes an image, it names one object at a time and it rarely repeats itself, yet how the model plans this order is far from obvious. We characterize the mechanism a VLM uses to decide where to look before it looks. The mechanism has four main parts. First, binding heads match the relevant text tokens against the image and resolve them into pointers to the matched image region. Second, the same binding heads bind each written answer to the region it came from, and the model turns it into a progress signal: a cursor, the position in the image up to which the list has been written. Third, a select step chooses the nearest unwritten region after the cursor, or stops. Finally, gaze heads execute the chosen pointer and return a concept of what is drawn there, which language heads and the late MLPs turn into a word in the language of the question. We validate each part of this mechanism through causal patching in Qwen3-VL models on a synthetic visual retrieval task, and test our mechanisms against alternative hypotheses. We further show that the mechanism holds across input formats, natural photographs, and languages, and that its binding, relay, and gaze heads appear at every model size from 2B to 32B. This work allows us to investigate how a VLM turns a question and an image into a sequence of answers, layer by layer and token by token. More broadly, it opens a way to study how models plan over complex multi-step tasks with long rollouts. Our project is available at https://plan.baulab.info/",
+    "authors": [
+      "Rohit Gandikota",
+      "Arnab Sen Sharma",
+      "Adam Belfki",
+      "David Bau"
+    ],
+    "published": "2026-11-16T18:58:30Z",
+    "updated": "2026-11-16T18:58:30Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21600v1",
+    "html_url": "https://arxiv.org/html/2611.21600v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21600v1.pdf",
+    "matched_keywords": [
+      "retrieval"
+    ],
+    "source_used": "html",
+    "source_text_chars": 222023,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 retrieval 相关；摘要显示其主要贡献为：When a vision-language model describes an image, it names one object at a time and it rarely repeats itself, yet how the model plans this order is far from obvious. We characterize the mechanism a VLM uses to decide where to look before it looks. The mechanis...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21565v1",
+    "title": "When Do Histology Foundation Models Need Geometric Test-Time Augmentation?",
+    "abstract": "Test-time augmentation (TTA) aggregates model predictions across multiple transformed views of an input during inference. Because histology images lack a canonical orientation, $D_4$ TTA---pooling across the 8 rotations and reflections of a square---is a standard default in computational pathology. However, the rise of self-supervised histology foundation models (FMs) with inherent rotational invariance calls its continued utility into question. We benchmark 9 histology FMs and 6 general-purpose models across four patch-level and two whole-slide image (WSI) datasets. We find that $D_4$ TTA remains a reliable post hoc improvement, but benefits diminish from $+1.98$ percentage points (pp) for general-purpose backbones to $+0.50$ pp for histology FMs on TCGA-UT, and shrink further for the largest models. To eliminate computational overhead, our experiments demonstrate that entropy routing---applying TTA selectively to uncertain predictions---recovers most of the gain while augmenting only ${\\sim}13\\%$ of samples. Finally, we show that patch-level TTA improvements do not transfer to slide-level multiple instance learning (MIL). Code: https://github.com/lars-chen/histology-tta",
+    "authors": [
+      "Lars Chen",
+      "Valentino F. Foit",
+      "Dorry Segev",
+      "Michal Mankowski"
+    ],
+    "published": "2026-11-16T18:41:01Z",
+    "updated": "2026-11-16T18:41:01Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21565v1",
+    "html_url": "https://arxiv.org/html/2611.21565v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21565v1.pdf",
+    "matched_keywords": [
+      "instance"
+    ],
+    "source_used": "html",
+    "source_text_chars": 71763,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 instance 相关；摘要显示其主要贡献为：Test-time augmentation (TTA) aggregates model predictions across multiple transformed views of an input during inference. Because histology images lack a canonical orientation, $D_4$ TTA---pooling across the 8 rotations and reflections of a square---is a stan...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21563v1",
+    "title": "Wildfire-SSR: Geolocation-Aware Multimodal Fusion for Structure-Level Wildfire Risk Assessment",
+    "abstract": "Structure-level wildfire vulnerability assessment is critical for reducing losses in wildland-urban interface communities, yet existing methods often fail to combine parcel-scale ignition pathways with community-scale geographic coverage. This study introduces Wildfire-SSR (Satellite and Street-view for wildfire Risk), a geolocation-aware multimodal framework that integrates macro-scale satellite context with micro-scale street-view evidence. A Vision-Language Model extracts wildfire-relevant building and site attributes from pre-event street-view panoramas and converts them into structured semantic text. These features are spatially aligned with satellite imagery through a decoupled cross-attention fusion decoder, while a frozen satellite-pretrained DINOv3 encoder captures overhead visual context. Alternative geolocation embedding strategies are evaluated to anchor text-derived features within each satellite patch. The framework is tested on approximately 37,000 structures affected by the 2025 Eaton and Palisades fires in Los Angeles, using wildfire risk labels derived from relative post-event damage patterns to better represent inherent structural vulnerability. Rotary Positional Embedding provides the strongest spatial grounding, achieving a building localization F1 score of 0.6735 and a harmonic mean F1 score of 0.2476 for five-class pixel-level risk classification, outperforming unimodal baselines and an unanchored multimodal configuration. The model also shows a conservative bias in higher-risk classes, reducing severe-risk underestimation, and completes end-to-end assessment of the study area in 37 minutes on a single GPU. Wildfire-SSR reframes cross-view fusion as localized semantic alignment and provides a scalable tool for mitigation prioritization, resilience planning, and insurance-oriented wildfire risk assessment.",
+    "authors": [
+      "Yu-Hsuan Ho",
+      "Yiming Xiao",
+      "Hao-En Lai",
+      "Ali Mostafavi",
+      "Samuel D. Brody"
+    ],
+    "published": "2026-11-16T18:40:49Z",
+    "updated": "2026-11-16T18:40:49Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21563v1",
+    "html_url": "https://arxiv.org/html/2611.21563v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21563v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "html",
+    "source_text_chars": 102815,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 multimodal 相关；摘要显示其主要贡献为：Structure-level wildfire vulnerability assessment is critical for reducing losses in wildland-urban interface communities, yet existing methods often fail to combine parcel-scale ignition pathways with community-scale geographic coverage. This study introduce...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21559v1",
+    "title": "Reference Forcing: Long Video Generation with Region-Guided Drift Correction",
+    "abstract": "Long video generation should keep the subject and background consistent while supporting rich, natural motion. However, autoregressive models are often distilled with distribution matching distillation (DMD) over short windows, which does not train them to keep this consistency over long ranges. As a result, the subject and background can drift over time. Methods that manage the key-value (KV) cache retain or retrieve history to reduce drift. Yet this history may itself have drifted. We propose Reference Forcing, which uses the initial frames as an appearance reference. We first build a teacher that uses attention masks to force each region of a new frame to attend to the same region in the initial frames. The teacher finds these regions with off-the-shelf segmentation models. We then distill this behavior into a separate attention path of the student, which needs no external models at inference. We further introduce value correction, which corrects drifted values in the KV cache toward the matching values of drift-free initial frames. Experiments show that Reference Forcing achieves state-of-the-art subject and background consistency among long-video methods on different base models, and its advantage grows with video length. Ablations show both components are needed to gain consistency without losing motion. More visualizations and code are available at https://zhaosheng-thu.github.io/reference-force/",
+    "authors": [
+      "Sheng Zhao",
+      "Haitian Zheng",
+      "Weikai Lin",
+      "Junjie Zhao",
+      "Yuhao Zhu"
+    ],
+    "published": "2026-11-16T18:39:47Z",
+    "updated": "2026-11-16T18:39:47Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21559v1",
+    "html_url": "https://arxiv.org/html/2611.21559v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21559v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "html",
+    "source_text_chars": 56725,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video 相关；摘要显示其主要贡献为：Long video generation should keep the subject and background consistent while supporting rich, natural motion. However, autoregressive models are often distilled with distribution matching distillation (DMD) over short windows, which does not train them to ke...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21553v1",
+    "title": "BLIP-Live: Balancing Timeliness & Firing Precision in Proactive Streaming Video Agents",
+    "abstract": "Streaming video understanding is becoming increasingly important for real-world interactive systems. Such systems must be proactive for natural and useful human interaction: they should respond as soon as sufficient evidence becomes available while avoiding premature, redundant, or incorrect responses. We present BLIP-Live, a framework unifying data, metrics, harness, and training around a shared formulation of proactivity as effective causal response decisions balancing the two competing objectives of responding vs silence. First, we construct BLIP-Live-780K dataset containing human annotations of proactive response content and timing, which defines this desired behavior. We then propose PAUC-F, a metric to effectively measure our desired proactive behavior. PAUC-F combines existing response timeliness metrics with firing precision to reward early useful responses without rewarding excessive firing. With our desired behavior defined and measurable, we finally investigate model-agnostic inference harnesses that draw out proactive streaming capabilities of offline vision language models (VLMs), together with training pipelines that learn to further improve their proactive responsiveness. Across both settings, we find that combinations of sliding visual windows, online interaction memory, and structured response outputs consistently yield strongest proactive performance. Our experiments result in two models, with our BLIP-Live-Qwen model achieving state-of-the-art performance across four proactive streaming benchmarks, with gains up to 44% over baselines and outperforming multiple closed API models. Our code and data will be released publicly.",
+    "authors": [
+      "Kanchana Ranasinghe",
+      "Honglu Zhou",
+      "Dominick Reilly",
+      "Le Xue",
+      "Shusheng Yang",
+      "Juan Carlos Niebles",
+      "Silvio Savarese",
+      "Ran Xu"
+    ],
+    "published": "2026-11-16T18:33:47Z",
+    "updated": "2026-11-16T18:33:47Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21553v1",
+    "html_url": "https://arxiv.org/html/2611.21553v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21553v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent"
+    ],
+    "source_used": "html",
+    "source_text_chars": 97020,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video, agent 相关；摘要显示其主要贡献为：Streaming video understanding is becoming increasingly important for real-world interactive systems. Such systems must be proactive for natural and useful human interaction: they should respond as soon as sufficient evidence becomes available while avoiding p...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21539v1",
+    "title": "Seen but Unsaid: Locating and Repairing Cross-Image Comparison in Vision-Language Models",
+    "abstract": "Vision-language models (VLMs) often fail to match a point or an object across two images, even when the answer can be decoded from their own hidden states. We trace this failure from the visual tokens to the answer letter, in Qwen3-VL (2B-32B), InternVL3.5-8B, and Gemma-3-12B, on synthetic shape matching, same-instance point correspondence (HPatches), and semantic correspondence (SPair-71k), and find two distinct failure points, a small set of attention heads that carries the comparison, and a repair that touches 0.02% of the parameters. Two failure points: exact copies are compared but not read out. An answer-position probe exceeds the calibrated output by 15 to 25 points in every family, for nameable and unnameable shapes alike, and steering along the probe's direction moves no more answers than random directions. Semantic correspondences are present in the visual tokens but never reach the answer. One pathway: redistributing the cross-image attention of 16-32 heads, with its mass preserved, removes 17-22 points of synthetic and 15-32 points of HPatches accuracy, against at most 7 for random or attention-matched heads. A lever that training finds on its own: training only these heads' query and key projections raises SPair-71k accuracy by 28.3 points (Qwen3-VL-8B) and 25.1 points (InternVL3.5-8B), beats both layer-matched and attention-matched heads, and transfers to HPatches and BLINK. An unconstrained all-layer adapter routes 21-51% of its gain through the attention of the same heads, against at most 7% for random heads, and does so by changing what they read (83-86% of the effect) rather than their weights. Every decision rule was frozen before its run, and every reported number is recomputed by independent verification scripts.",
+    "authors": [
+      "Zhaoning Zhang"
+    ],
+    "published": "2026-11-16T18:25:57Z",
+    "updated": "2026-11-16T18:25:57Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21539v1",
+    "html_url": "https://arxiv.org/html/2611.21539v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21539v1.pdf",
+    "matched_keywords": [
+      "instance"
+    ],
+    "source_used": "html",
+    "source_text_chars": 94128,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 instance 相关；摘要显示其主要贡献为：Vision-language models (VLMs) often fail to match a point or an object across two images, even when the answer can be decoded from their own hidden states. We trace this failure from the visual tokens to the answer letter, in Qwen3-VL (2B-32B), InternVL3.5-8B...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21530v1",
+    "title": "DuoFlow: Towards Synchronized Speech and Motion Generation with Fine-Grained Control",
+    "abstract": "An embodied speaker's expressiveness depends not only on what is said, but also on how the voice sounds and how the body moves. However, existing joint speech-motion generation models are largely driven implicitly by transcript semantics or intermediate speech representations, offering little explicit control over motion hierarchy, body parts, or vocal style. To bridge this gap, we construct MotionSpeech, a structured benchmark for controllable joint speech-motion generation that includes transcripts, voice-style descriptions, and motion conditions at two hierarchical levels. Building on this benchmark, we propose DuoFlow, a dual-stream latent flow transformer that jointly denoises speech and motion under a shared noise level and a unified second-based temporal coordinate. Modality-specific residual connectors inject structured conditions into the corresponding streams, layer-wise bidirectional cross-modal attention coordinates their generation, and a monotonic phoneme pathway combines normalized progress anchors with CTC supervision to strengthen speech temporal modeling. DuoFlow provides a unified interface for fine-grained motion and vocal-style control and demonstrates the ability to synthesize high-quality, synchronized, and instruction-consistent speech-motion sequences.",
+    "authors": [
+      "Jun Dong",
+      "Ronghui Li",
+      "Zhongyuan Hu",
+      "Yunqi Zhao",
+      "Lijie Guo",
+      "Ruizhang Xu",
+      "Di Kang",
+      "Linchao Bao",
+      "Xiu Li"
+    ],
+    "published": "2026-11-16T18:22:22Z",
+    "updated": "2026-11-16T18:22:22Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21530v1",
+    "html_url": "https://arxiv.org/html/2611.21530v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21530v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "html",
+    "source_text_chars": 50184,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 representation 相关；摘要显示其主要贡献为：An embodied speaker's expressiveness depends not only on what is said, but also on how the voice sounds and how the body moves. However, existing joint speech-motion generation models are largely driven implicitly by transcript semantics or intermediate speec...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21485v1",
+    "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+    "abstract": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating memories as environments change. Yet existing evaluations often leave physical place identity across separated visits implicit. We introduce ReSpaceBench, a benchmark comprising 3,244 questions across 590 synthetic and real-home scenes, organized into 9 tasks spanning room association, persistent state tracking, and downstream reasoning. Controlled walkthroughs define visits by physical room entry and deliberately include same-type room distractors and cross-session object changes. Our evaluation of 32 models and 3 agentic video-understanding frameworks reveals substantial limitations: the strongest evaluated zero-shot model achieves 50.5% overall accuracy and 52.2% on a 450-question subset, compared with 90.1% for human annotators. The evaluated agentic frameworks offer no overall improvement over direct inference with the same base model. Analysis of agent execution traces reveals evidence omissions and incorrect cross-visit room associations as major failure modes, suggesting that iterative evidence seeking alone does not ensure consistent spatial memory. Further analyses expose a gap between recognizing familiar rooms and identifying the correct visited room, while annotation-guided sampling highlights the importance of preserving intervening visits and transitions. We also provide RS-30K, a separate training dataset from synthetic sources with no template, scene, route, or video overlap with the benchmark. Fine-tuning Qwen3-VL-8B raises overall accuracy from 35.5% to 60.4%, with the largest gains in association and improvements extending to real-life scenes.",
+    "authors": [
+      "Henry Zheng",
+      "Weibo Gong",
+      "Yang Yue",
+      "Rui Huang",
+      "Yang Zhang",
+      "Gao Huang"
+    ],
+    "published": "2026-11-16T17:54:39Z",
+    "updated": "2026-11-16T17:54:39Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21485v1",
+    "html_url": "https://arxiv.org/html/2611.21485v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21485v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 1924,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video, agent 相关；摘要显示其主要贡献为：Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating m...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "abstract",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21479v1",
+    "title": "LynnReal-Hand: Unlocking World Interaction with Hand Control",
+    "abstract": "Interactive video world models enable exploration through text and camera controls, yet direct object interaction requires finer control. Hands provide a natural interface, but translating continuous hand movements into coherent visual responses remains challenging because of complex hand-object dynamics and demanding real-time computation. To address these challenges, we introduce LynnReal-Hand, a hand-controlled video world model that unifies precise interaction modeling with efficient streaming generation. We curate 100K interaction clips spanning diverse real and synthetic environments and develop hand-aware supervision to improve fine-grained hand motions and object interactions. Building on this foundation, we learn a causal flow map for few-step generation and introduce region-aware score distillation that combines complementary video and image priors to refine interaction dynamics and visual appearance. To further reduce inference latency, we propose Ultra-Fast-VAE, a compact video decoder that preserves high reconstruction fidelity with substantially lower computational cost. Extensive evaluations on HandBench demonstrate superior hand-following accuracy and visual quality compared with existing approaches. Our full-sequence model achieves an FVD of 181.67 and a MANO Dice score of 93.02, while the three-step causal model maintains a MANO Dice score of 92.49. For real-time interaction, 540p streaming on a single H200 reaches 18.03 FPS with 741ms latency and an optimized peak GPU memory footprint of only 34.89GB. We will release the datasets, model weights, and the full training and inference code to support research on hand-controlled video world models.",
+    "authors": [
+      "Shaohao Rui",
+      "Chaoyang Zhang",
+      "Xiaofeng Mao",
+      "Weijie Ma"
+    ],
+    "published": "2026-11-16T17:51:44Z",
+    "updated": "2026-11-16T17:51:44Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21479v1",
+    "html_url": "https://arxiv.org/html/2611.21479v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21479v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "html",
+    "source_text_chars": 94685,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video 相关；摘要显示其主要贡献为：Interactive video world models enable exploration through text and camera controls, yet direct object interaction requires finer control. Hands provide a natural interface, but translating continuous hand movements into coherent visual responses remains chall...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21457v1",
+    "title": "Out of Sight, Into Memory: Compact Visual Latents Retain Local Evidence in Ultra-High-Resolution Remote Sensing",
+    "abstract": "Question answering over ultra-high-resolution (UHR) remote sensing scenes poses a tension for multimodal large language models: global overviews obscure small objects and local attributes, whereas detailed crops consume substantial context. Compressing inspected crops into short sequences of continuous visual latents offers a compact memory once crop tokens are discarded, yet diagnostic studies on natural images find that models often ignore latent content, leaving unclear whether compact latents can retain fine-grained targets lost in downsampled UHR remote sensing scenes. To isolate evidence retention from region selection, we encode high-resolution crops into latent memory tokens for frozen backbones and evaluate both their predictive utility and content dependence. Across two generations of Qwen-VL on LRS-GRO, a 64-token memory achieves 7.6- to 9.9-fold compression of retained crop tokens and improves accuracy by 2.5 to 4.8 percentage points over the downsampled global image alone, recovering most of the high-resolution crop gain with consistent behavior on XLRS-Bench. Substituting memory from another image or another region of the same scene reduces accuracy by 5.8 to 7.4 percentage points and yields lower accuracy than removing memory altogether, demonstrating that predictions depend on the encoded regional evidence. Restoring the source crop within the same model reduces the accuracy loss caused by zeroing or removing memory. These findings establish that compact visual latents retain useful local evidence in UHR remote sensing and identify evidence availability as a key factor governing their contribution.",
+    "authors": [
+      "Meng Tang",
+      "Siyuan Du",
+      "Yuxin Liu",
+      "Shuaishuai Cao",
+      "Di Wang",
+      "Haonan Guo"
+    ],
+    "published": "2026-11-16T17:42:12Z",
+    "updated": "2026-11-16T17:42:12Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21457v1",
+    "html_url": "https://arxiv.org/html/2611.21457v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21457v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "html",
+    "source_text_chars": 47831,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 multimodal 相关；摘要显示其主要贡献为：Question answering over ultra-high-resolution (UHR) remote sensing scenes poses a tension for multimodal large language models: global overviews obscure small objects and local attributes, whereas detailed crops consume substantial context. Compressing inspec...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21440v1",
+    "title": "[CLS] and [EOS] Tokens are not Enough for CLIP-based Class-Incremental Learning",
+    "abstract": "Class-Incremental Learning (CIL) aims to empower models to continuously acquire new knowledge while mitigating catastrophic forgetting. With the advent of vision-language models like CLIP, leveraging their cross-modal alignment capabilities to address CIL challenges has emerged as a dominant paradigm. Existing methods leverage CLIP's global representations (i.e., the visual [CLS] token and the textual [EOS] token) for cross-modal alignment. While achieving effective classification, they overlook the rich patch-level visual features and token-level textual semantics inherent in CLIP. For example, the [CLS] token aggregates local information to capture the general concept of \"cat\", while the patch-level details retain specific localized features essential for recognition, such as the tail, fur, and face. We propose PACE (PAtch-token Cross-modal Enhancement) to uncover the long-neglected local representations within CLIP. First, based on the global representations like [CLS] token and [EOS] token, we identify the top-k most crucial visual patches and textual tokens. Subsequently, to better utilize the extracted key local features, we design a cross-modal fusion module. This module leverages local textual semantics to refine visual representations, while augmenting textual semantics with local visual features. As the fusion module is shared across all tasks, directly fine-tuning it on new tasks would interfere with the knowledge learned from previous tasks, leading to catastrophic forgetting. To alleviate this, we employ a projection-based update strategy to effectively preserve the critical parameter space of previous tasks during the adaptation to new tasks. Extensive experiments demonstrate that PACE significantly outperforms state-of-the-art methods across multiple CIL benchmarks.",
+    "authors": [
+      "Hao Sun",
+      "Tao Hu",
+      "Shixiong Kai",
+      "Siyuan Xu",
+      "Wenqian Zhao",
+      "Mingxuan Yuan",
+      "Da-Wei Zhou"
+    ],
+    "published": "2026-11-16T17:28:17Z",
+    "updated": "2026-11-16T17:28:17Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21440v1",
+    "html_url": "https://arxiv.org/html/2611.21440v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21440v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "html",
+    "source_text_chars": 91679,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 representation 相关；摘要显示其主要贡献为：Class-Incremental Learning (CIL) aims to empower models to continuously acquire new knowledge while mitigating catastrophic forgetting. With the advent of vision-language models like CLIP, leveraging their cross-modal alignment capabilities to address CIL cha...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21438v1",
+    "title": "Power Line Detection in Point Clouds with Point-SAM and RANSAC",
+    "abstract": "This article deals with the problem of detecting the position of power lines in airborne laser scanning point clouds. We address both the problem of segmenting power lines from background like ground and vegetation and of identifying individual lines. For segmentation we compare a rule-based approach with one based on transfer learning (Point-SAM). For individual line detection, we derive the mathematical formulas for RANSAC applied to 3D catenaries and compare it with a non-parametric method (TriplClust). All methods are evaluated on a newly created dataset \"PowLiDFR\", which we make publicly available. The samples have been taken from the French project LiDAR HD and cover a variety of terrain layouts and point cloud resolutions. On this dataset, an unsupervised transfer learning outperformed a mere rule-based segmentation, and for individual power line detection, RANSAC was better in following the shape of catenaries than the non-parametric algorithm.",
+    "authors": [
+      "Christoph Dalitz",
+      "Oskar Waedt",
+      "Steffen Goebbels",
+      "Mahdieh Shamsadini Motlagh",
+      "Gabriel Gerzabek"
+    ],
+    "published": "2026-11-16T17:25:02Z",
+    "updated": "2026-11-16T17:25:02Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21438v1",
+    "html_url": "https://arxiv.org/html/2611.21438v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21438v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "html",
+    "source_text_chars": 35991,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 3d 相关；摘要显示其主要贡献为：This article deals with the problem of detecting the position of power lines in airborne laser scanning point clouds. We address both the problem of segmenting power lines from background like ground and vegetation and of identifying individual lines. For seg...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21419v1",
+    "title": "Quality and Similarity Indicators for Video-Based Heart Rate and Respiratory Rate Fusion: A Controlled Evaluation",
+    "abstract": "Camera-based heart rate (HR) and respiratory rate (RR) estimates vary in reliability from window to window, and a common remedy is to fuse several extraction methods with weights from reference-free signal quality indicators. However, few studies test whether these indicators identify the most accurate method in each window or outperform simpler fusion. We evaluate 11 quality indicators and 8 inter-method similarity measures for fusing 7 HR and 10 RR extractors on four public datasets (75 test subjects). Filters, indicator directions, weighting parameters and a learned ridge baseline are selected on a separate five-subject set before testing. Fusion is compared with equal averaging, a constant typical-rate predictor, the best single method selected in advance and in hindsight, and a per-window oracle with a permutation-based null, using subject-level bootstrap confidence intervals. For HR, quality-weighted fusion reduced mean absolute error by 10.9% [5.2, 18.4] relative to averaging and by 15.6% [8.1, 23.1] relative to the method selected in advance, and was statistically indistinguishable from the best method selected in hindsight. Weighting methods by their agreement did not improve on averaging. For RR, the indicators could not identify the more accurate estimates: sharpened quality weighting increased error (-2.6% [-4.8, -0.8]), fused estimates were uncorrelated with the reference (r <= 0.22), and averaging was less accurate than the typical-rate predictor (-3.1% [-6.1, -0.4]). With a second respiratory reference, apparent RR gains reflected estimates moving toward its typical rate. Quality-guided fusion is worthwhile for video HR; for RR, 30-s windows improved estimates but not fusion.",
+    "authors": [
+      "Nhi Nguyen",
+      "Le Nguyen",
+      "Manuel Lage Cañellas",
+      "Miguel Bordallo López",
+      "Constantino Álvarez Casado"
+    ],
+    "published": "2026-11-16T17:10:13Z",
+    "updated": "2026-11-16T17:10:13Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21419v1",
+    "html_url": "https://arxiv.org/html/2611.21419v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21419v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "html",
+    "source_text_chars": 132855,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video 相关；摘要显示其主要贡献为：Camera-based heart rate (HR) and respiratory rate (RR) estimates vary in reliability from window to window, and a common remedy is to fuse several extraction methods with weights from reference-free signal quality indicators. However, few studies test whether...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21392v1",
+    "title": "VideoNexus: Video Perception Beyond the Reasoning Context",
+    "abstract": "Understanding long videos requires locating evidence, resolving visual details, and integrating observations into an answer. Even when relevant evidence is present, performing these operations within long, dense visual sequences burdens both perception and reasoning. Video agents enable selective inspection, but returning frames to the planner still accumulates visual information in its reasoning context. Delegating perception reduces this burden, yet sparse sampling can miss decisive details, and per-frame descriptions can preserve context growth. We introduce VideoNexus, a training-free framework that separates detailed video perception from evidence-driven planning and reasoning. The planner controls where to inspect, what to resolve, and how densely to sample. Perception sub-agents process native audio-video in independent contexts and return compact, temporally grounded evidence for iterative search and verification. Using Gemini 3.8 Flash for both planning and perception, VideoNexus achieves 88.6% accuracy on full LVBench, exceeding same-backbone static ingestion and built-in agentic processing by 3.6 and 1.1 points, respectively, at 44% of the latter's measured API cost. A paired LVBench subset ablation shows lower planner input and higher accuracy. With Kimi K3 as the shared backbone, VideoNexus improves over the official Video-GAIA ReAct harness by 8.5 points in our evaluation. These results support compact evidence exchange for combining detailed observation with efficient planning and reasoning.",
+    "authors": [
+      "Yancheng Long",
+      "Xuanyu Zheng",
+      "Wei Chen",
+      "Luoyuan Zhang",
+      "Haoyang Xu",
+      "Bin Wen",
+      "Tingting Gao"
+    ],
+    "published": "2026-11-16T16:49:25Z",
+    "updated": "2026-11-16T16:49:25Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21392v1",
+    "html_url": "https://arxiv.org/html/2611.21392v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21392v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent"
+    ],
+    "source_used": "html",
+    "source_text_chars": 113677,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video, agent 相关；摘要显示其主要贡献为：Understanding long videos requires locating evidence, resolving visual details, and integrating observations into an answer. Even when relevant evidence is present, performing these operations within long, dense visual sequences burdens both perception and re...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:24+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21383v1",
+    "title": "The Mask Is Not the Object: Volumetric Supervision for 3D Gaussian Segmentation",
+    "abstract": "3D Gaussian Splatting enables object-level operations on Gaussian primitives, yet existing segmentation methods are largely trained and evaluated through rendered views. This mismatch can produce accurate rendered masks from incomplete 3D selections since alpha-blended feature supervision concentrates learning on dominant contributors while leaving occluded or low-contribution Gaussians weakly supervised. We propose VODA, a plug-and-play supervision objective that exploits local depth structure to group per-pixel contributors and directly supervises all Gaussians in selected depth clusters, bypassing contribution-weighted gradient delivery. To evaluate volumetric completeness, we introduce Removal-3D, a synthetic object-removal benchmark, and the Removal Depth Error (RDE), a metric comparing predicted and ground-truth depth changes. Across four rendering-based baselines, VODA consistently improves volumetric segmentation on Removal-3D while maintaining or improving performance on LERF and ScanNet. Further analysis shows that VODA recovers lower-contribution Gaussians, while simple gradient reweighting and spatial propagation fail to reproduce comparable gains.",
+    "authors": [
+      "Jeonghwan Cho",
+      "Minsu Kim",
+      "Junyoung Hong",
+      "Seon Joo Kim"
+    ],
+    "published": "2026-11-16T16:44:07Z",
+    "updated": "2026-11-16T16:44:07Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21383v1",
+    "html_url": "https://arxiv.org/html/2611.21383v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21383v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "html",
+    "source_text_chars": 88329,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 3d 相关；摘要显示其主要贡献为：3D Gaussian Splatting enables object-level operations on Gaussian primitives, yet existing segmentation methods are largely trained and evaluated through rendered views. This mismatch can produce accurate rendered masks from incomplete 3D selections since alp...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:25+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21373v1",
+    "title": "WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection",
+    "abstract": "Recent advances in video generation call for reliable detection grounded in explicit forensic evidence. However, current methods primarily depend on single-pass chain-of-thought reasoning that overlooks brief or localized artifacts, or on predefined multi-agent workflows that offer limited flexibility in selecting relevant inspections. Even with adaptive investigation, optimizing the investigation policy alone does not directly improve the forensic capabilities of fixed experts. We introduce WeVisForensics, an agentic framework in which a main investigator agent coordinates a self-evolving library of forensic inspector sub-agents spanning visual and audio cues. The investigator learns which artifact type to examine, over which window, and when to conclude, and these interactions provide shared feedback for both levels of agents. Our dual-timescale policy optimization strategy, DTPO, closes this loop through fast reinforcement learning of the investigator and slower refinement of the inspectors, guided by annotated artifact intervals, to report subtle artifacts they once dismissed. Furthermore, we curate ForenCue-30K, combining role-specific forensic annotations and interaction trajectories to supervise individual inspections and their coordination, with an accompanying reinforcement-learning pool. Experiments show that WeVisForensics averages 95.2% detection accuracy across in-domain, out-of-domain and agentic benchmarks, 9.0% above the strongest prior detector, while grounding its verdicts in localized evidence.",
+    "authors": [
+      "Yipeng Du",
+      "Yuxi Li",
+      "Ying Zhang",
+      "Chong Sun",
+      "Chen Li",
+      "Jing Lyu",
+      "Ying Tai"
+    ],
+    "published": "2026-11-16T16:36:14Z",
+    "updated": "2026-11-16T16:36:14Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21373v1",
+    "html_url": "https://arxiv.org/html/2611.21373v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21373v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent"
+    ],
+    "source_used": "html",
+    "source_text_chars": 154218,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video, agent 相关；摘要显示其主要贡献为：Recent advances in video generation call for reliable detection grounded in explicit forensic evidence. However, current methods primarily depend on single-pass chain-of-thought reasoning that overlooks brief or localized artifacts, or on predefined multi-age...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:25+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21366v1",
+    "title": "ALIVE: Making Streaming Video Models Interactive",
+    "abstract": "Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We construct ALIVE-SFT-288K and ALIVE-RL-3K for two-stage training. Contrastive supervised fine-tuning teaches when and how to respond, while reinforcement learning with Behavior-Aligned Credit Assignment (BACA) combines trajectory-level and local advantages to refine decisions, responses, and silence across multi-turn interactions. We also introduce FSI-Bench to evaluate feedback seeking and subsequent task completion. ALIVE achieves the highest overall scores among the compared models on four public benchmarks and FSI-Bench, demonstrating strong streaming understanding and interactive capabilities.",
+    "authors": [
+      "Jinzhao Li",
+      "Yuan Xu",
+      "Jinxuan Wu",
+      "Yukun Wang",
+      "Yijia Lei",
+      "Hanyu Ji",
+      "Yinuo Chen",
+      "Zining Huang",
+      "Chi Zhang",
+      "Hang Ye",
+      "Yiwu Zhong",
+      "Honglei Yan",
+      "Panwang Pan",
+      "Yizhou Wang",
+      "Yin Li",
+      "Miao Liu"
+    ],
+    "published": "2026-11-16T16:35:01Z",
+    "updated": "2026-11-16T16:35:01Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21366v1",
+    "html_url": "https://arxiv.org/html/2611.21366v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21366v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 912,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video 相关；摘要显示其主要贡献为：Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We c...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "abstract",
+      "created_at": "2026-11-17T08:45:25+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21339v1",
+    "title": "MovieRoll: A Systematic Framework for Rolling Out Long-Form Videos",
+    "abstract": "Streaming video generation must sustain quality beyond the training horizon while handling self-generated history and growing cache costs. To address these challenges, we present MovieRoll, a base-to-distilled framework that connects streaming fine-tuning, long-rollout distillation, and long-horizon inference. We first establish a robust multi-step base through Window-wise Teacher Forcing (WinTF), which jointly denoises chunks at progressive noise levels with bidirectional attention within each window and causal access to preceding history. To retain historical context efficiently, hierarchical KV-cache compression (HieraKV) exploits layer-wise attention patterns, retaining full history in shallow layers and sink--recent history in deeper layers. This reduces cache memory by up to 78% while improving generation quality. Building on this base, cumulative long tuning with distribution matching distillation (CuLT-DMD) holds parameters fixed throughout each long self-rollout and averages local gradients before updating. Each update therefore combines supervision across temporal positions while retaining only one local computation graph, enabling efficient long-rollout training of a few-step generator. To extend generation beyond the training horizon, KV recomputation bounds context for both models, while guidance annealing (AnnealCFG) reduces guidance toward the clean endpoint to stabilize MovieRoll-Base. Complementing these modeling advances, FBCA attention and PS-VAE decoding support efficient training and streaming output. On HeliosBench, MovieRoll-Base remains competitive at 30s after training on videos of up to 15s, and MovieRoll-Distilled achieves the highest total scores among the compared methods across single- and multi-event evaluations up to 60s, combining sustained naturalness with active motion.",
+    "authors": [
+      "Yunyang Ge",
+      "Weijie Kong",
+      "Ryan Xu",
+      "Yue Wu",
+      "Qi Tian",
+      "Jiangfeng Xiong",
+      "Bin Lin",
+      "Mingzhe Zheng",
+      "Shenghai Yuan",
+      "Zheyuan Liu",
+      "Jianwei Zhang",
+      "Li Yuan"
+    ],
+    "published": "2026-11-16T16:21:07Z",
+    "updated": "2026-11-16T16:21:07Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21339v1",
+    "html_url": "https://arxiv.org/html/2611.21339v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21339v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "html",
+    "source_text_chars": 134146,
+    "summary": {
+      "model": "fallback-no-api",
+      "core_contribution": "该论文与 video 相关；摘要显示其主要贡献为：Streaming video generation must sustain quality beyond the training horizon while handling self-generated history and growing cache costs. To address these challenges, we present MovieRoll, a base-to-distilled framework that connects streaming fine-tuning, lo...",
+      "method": "未配置 OPENAI_API_KEY，方法细节未调用模型总结。",
+      "source_used": "html",
+      "created_at": "2026-11-17T08:45:25+00:00",
+      "status": "fallback"
+    },
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21311v1",
+    "title": "A2A-UAV: A Multimodal Air-to-Air Dataset for UAV Detection and Identification",
+    "abstract": "The rapid growth of unmanned aerial vehicles (UAVs) in low-altitude airspace increases the risk of unauthorized intrusions, making reliable detection and identification of non-cooperative UAVs essential for low-altitude airspace safety. However, the existing public UAV datasets are mostly acquired from fixed ground-based viewpoints and are limited to imaging or radio-frequency (RF) observations, which restricts the sensing coverage and deployment flexibility. To address this gap, we present A2A-UAV, a multimodal air-to-air dataset for UAV detection and identification. Specifically, 15 target UAVs of 13 commercial models were recorded at three outdoor sites under daytime and nighttime conditions by using a UAV-mounted platform equipped with an RGB-thermal gimbal camera, a panoramic camera, an RF spectrum analyzer, and a millimeter-wave radar. The dataset contains 105,294 time-aligned samples of RGB, panoramic, thermal, and RF time-frequency images and radar point clouds. Moreover, all 209,539 bounding boxes of the predominantly small UAV targets were manually annotated and cross-checked. Therefore, A2A-UAV provides a valuable resource for air-to-air UAV detection, identification, and multimodal fusion in low-altitude airspace.",
+    "authors": [
+      "Hongtao Liang",
+      "Yiyao Wan",
+      "Kezhi Zhu",
+      "Jiayi Zhang",
+      "Zequn Jiang",
+      "Ziyu Zhou",
+      "Jiahuan Ji",
+      "Fuhui Zhou",
+      "Qihui Wu"
+    ],
+    "published": "2026-11-16T16:07:59Z",
+    "updated": "2026-11-16T16:07:59Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21311v1",
+    "html_url": "https://arxiv.org/html/2611.21311v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21311v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21308v1",
+    "title": "Rotation-Invariant Machine Learning for Highly Symmetric Molecular Configurations",
+    "abstract": "Atomistic machine learning can approximate expensive quantum mechanical calculations at a fraction of their computational cost, but accuracy depends strongly on how the three-dimensional atomic environments are represented. Invariant representations enable fast computation but can fail to distinguish geometrically distinct configurations, especially in highly symmetric environments. We introduce a lightweight benchmark to evaluate expressivity on $n$-fold symmetric configurations, and use it to expose degeneracies in both invariant and equivariant architectures. Guided by these results, we construct a new invariant basis for HIP-HOP which resolves most of the identified failures. On a methane simulation dataset, the extended basis achieves the lowest error among the HIP-HOP variants and has similar accuracy to EquiformerV3 while running $3.2\\times$ faster at inference. These results show that carefully constructed invariant representations can mitigate key expressivity limitations while balancing accuracy and computational efficiency.",
+    "authors": [
+      "Logan Bolton",
+      "Tomas Karella",
+      "Nicholas Lubbers",
+      "Nathaniel Philip Gorski",
+      "Emily Shinkle",
+      "Alice Elisabeth Anastasia Allen",
+      "Pieter J Swart",
+      "Roxana Bujack"
+    ],
+    "published": "2026-11-16T16:06:47Z",
+    "updated": "2026-11-16T16:06:47Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21308v1",
+    "html_url": "https://arxiv.org/html/2611.21308v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21308v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21304v1",
+    "title": "Fix, Don't Retake: Physics-Simulated Training for Correcting Patient Positioning Errors in Dental Panoramic Radiographs",
+    "abstract": "Patient-positioning errors can distort panoramic radiographs and lead to repeat examinations. This study investigated artificial intelligence for correcting these errors in existing images. A physics-based simulator generated paired correctly positioned and mispositioned panoramics from cone-beam computed tomography volumes, with controlled individual and combined positioning errors. Five approaches were compared: U-Net, pix2pix, conditional diffusion, an error-conditioned model, and a mixture of error-specific specialists. Evaluation used image similarity and geometric metrics across three test sets. All approaches improved mean image similarity and reduced geometric errors, with U-Net and the two error-aware approaches outperforming pix2pix and conditional diffusion.",
+    "authors": [
+      "Sema Helali",
+      "Lina Abu Nada",
+      "Faleh Tamimi",
+      "Rafat Damseh"
+    ],
+    "published": "2026-11-16T16:04:54Z",
+    "updated": "2026-11-16T16:04:54Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21304v1",
+    "html_url": "https://arxiv.org/html/2611.21304v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21304v1.pdf",
+    "matched_keywords": [
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21302v1",
+    "title": "Déjà-Events: Multi-view 3D Geometry with Event Cameras via Sparsity-Aware Adaptive Gating",
+    "abstract": "Event cameras keep capturing structure where conventional cameras blur or saturate, which makes them attractive for 3D perception in fast or poorly lit scenes. Event datasets with dense 3D ground truth, however, are far smaller and less diverse than the image collections behind feed-forward 3D reconstruction models. We present Déjà-Events, an event-only model that predicts depth, camera pose and pointmaps from multiple views in a single forward pass. Rather than relying on scarce 3D labels, we distil it from Déjà View, a feed-forward RGB model that refines its tokens by repeatedly applying one shared transformer block. On paired RGB and event recordings, the event student learns to reproduce the frozen teacher's final tokens, which requires no depth or pose ground truth and trains only about 1% of its parameters. Because events are dense at edges and moving texture but nearly absent in textureless regions, we further introduce sparsity-aware adaptive gating, which adapts the shared block's gates to events and adjusts them per patch by event density, so that accuracy holds as refinement steps are added. Trained only on simulated data, Déjà-Events achieves the lowest pointmap error among the event-based methods we evaluate, on EventScape and zero-shot on the real MVSEC and DSEC datasets. On DSEC it halves the error of the strongest baseline (0.15 vs. 0.30 AbsRel) with about a tenth of its parameters. It also has the lowest depth error on EventScape and DSEC and the lowest trajectory error on EventScape.",
+    "authors": [
+      "Arda Cinar Demirtas",
+      "Pablo Varela Bernal",
+      "Marc Pollefeys",
+      "Sunghwan Hong"
+    ],
+    "published": "2026-11-16T16:03:42Z",
+    "updated": "2026-11-16T16:03:42Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21302v1",
+    "html_url": "https://arxiv.org/html/2611.21302v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21302v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21290v1",
+    "title": "FM-Recon: Exploring Foundation Model Features for Accelerated Cardiac Cine MRI Reconstruction",
+    "abstract": "Foundation models have demonstrated strong feature extraction capabilities across various medical imaging tasks, yet their potential for MRI reconstruction remains largely unexplored, particularly within unrolled reconstruction networks and under artifact-corrupted inputs. In this work, we explore whether and how features from pretrained foundation models can benefit accelerated cardiac cine MRI reconstruction. To this end, we propose FM-Recon, a framework that refines and integrates extracted features from frozen image encoder of foundation models into an unrolled reconstruction network. Through extensive experiments on the CMRxRecon2023 dataset, we systematically evaluate foundation model features across different reconstruction settings. Our results show that foundation models can extract informative representations from artifact-corrupted inputs and improve reconstruction performance, particularly at moderate acceleration factors. These findings demonstrate the potential of foundation model features for accelerated MRI reconstruction and provide insights into their effective integration into unrolled reconstruction networks.",
+    "authors": [
+      "Donghang Lyu",
+      "Marius Staring",
+      "Ruochen Gao",
+      "Jochen Keupp",
+      "Hildo J. Lamb",
+      "Mariya Doneva"
+    ],
+    "published": "2026-11-16T15:55:34Z",
+    "updated": "2026-11-16T15:55:34Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21290v1",
+    "html_url": "https://arxiv.org/html/2611.21290v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21290v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21283v1",
+    "title": "PLECTA: Overlap-aware instance segmentation of dense strand networks from binary masks",
+    "abstract": "Many materials and tissues, including carbon-nanotube sheets, collagen and paper, comprise overlapping strands whose arrangement influences their effective properties. Measuring this geometry from micrographs requires individual strands to be traced through crossings and signal gaps, which merge distinct strands or split one strand into disconnected fragments. We present PLECTA (from Latin plecta, a braid), a deterministic method that segments individual strands using only a binary image whose foreground pixels mark strand centrelines. At each junction, PLECTA selects which strand segments continue into one another while allowing segments to terminate. It formulates this decision as an exact maximum-weight partial-matching problem, with an explicit penalty for unpaired segments and no restriction on the number of segments entering a junction. The output permits crossing pixels to belong to multiple strands. On synthetic scenes, PLECTA resolved strand identities more accurately than three released alternatives at every density tested. The same ranking held on an independently published generator run at its own settings. A separate stage uses the corresponding greyscale micrograph to estimate which strand lies on top at each crossing. The complete workflow is demonstrated on scanning electron micrographs of carbon nanotube sheets, from raw images to individual strand instances with estimated crossing order, without manual annotations for training or as pipeline inputs.",
+    "authors": [
+      "Oday Allan",
+      "Igor Ostanin"
+    ],
+    "published": "2026-11-16T15:52:55Z",
+    "updated": "2026-11-16T15:52:55Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21283v1",
+    "html_url": "https://arxiv.org/html/2611.21283v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21283v1.pdf",
+    "matched_keywords": [
+      "instance"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21253v1",
+    "title": "QuantileGS: Quantile-Based Conformal Bounds on RGB Rendering Errors for Novel View Synthesis with 3D Gaussian Splatting",
+    "abstract": "Uncertainty quantification for novel view synthesis with 3D Gaussian Splatting (3DGS) assesses rendering reliability at unseen viewpoints. This reliability depends on the discrepancy between rendered and true colors, which cannot be measured without ground-truth images. We therefore quantify uncertainty in this unknown discrepancy through upper bounds on per-pixel RGB mean absolute error. However, learned bounds may underestimate these errors and overstate rendering reliability, motivating calibration to a prescribed coverage level. In this paper, we propose QuantileGS, a post-hoc framework that combines learned rendering-error quantiles with scale-normalized conformal calibration to produce spatially adaptive error bounds. The framework comprises three phases. Phase 1, Rendering-Error Computation, measures RGB mean absolute error between observed images and predictions from a frozen 3DGS model. Phase 2, Ordered Gaussian Quantile Fields, learns two scalar attributes per Gaussian to predict lower and upper rendering-error quantiles. Phase 3, Scale-Normalized Conformal Calibration, calibrates the upper prediction on held-out images, using the quantile gap to scale the correction. Under the stated assumptions, the resulting bounds provide finite-sample marginal coverage. At a nominal coverage level of 90%, calibration raises mean empirical test coverage from 69.6% to 89.6% on LLFF and from 80.1% to 92.1% on Mip-NeRF 360. On LF, coverage remains conservative at 96.3% before and 96.4% after calibration. Applications to active view selection, Gaussian pruning, and RGB-D simultaneous localization and mapping illustrate how these bounds inform downstream decisions.",
+    "authors": [
+      "Haiyang Xu",
+      "Ziye Zhang",
+      "Bin Pan",
+      "Xia Xu",
+      "Zhenwei Shi"
+    ],
+    "published": "2026-11-16T15:28:51Z",
+    "updated": "2026-11-16T15:28:51Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21253v1",
+    "html_url": "https://arxiv.org/html/2611.21253v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21253v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21229v1",
+    "title": "Investigating the Benefit of Transfer Learning from the Locus Coeruleus for Substantia Nigra Pars Compacta Segmentation",
+    "abstract": "The substantia nigra pars compacta (SNpc) is a small midbrain nucleus that degenerates early in Parkinson's disease (PD). T1-weighted FLASH MRI enables its visualization and may support early detection of neurodegeneration. However, manual segmentation is difficult and time-consuming, and deep learning models often suffer from the limited availability of labeled data. Transfer learning (TL) may help by adapting pre-trained models to small datasets. We investigate whether TL from a model trained on the locus coeruleus (LC), a nucleus with a similar appearance in this sequence, improves SNpc segmentation. Several TL strategies were evaluated using a 3D U-Net. With as few as 5-14 labeled subjects, TL and training from scratch achieved similar performance, reaching a Dice similarity coefficient of up to 0.77, close to reported inter-rater agreement. No TL strategy differed significantly from training from scratch, suggesting that initialization from the LC offers no significant benefit for SNpc segmentation.",
+    "authors": [
+      "Tayebeh Bahador",
+      "Max Dünnwald",
+      "Matthew J. Betts",
+      "Emrah Düzel",
+      "Steffen Oeltze-Jafra"
+    ],
+    "published": "2026-11-16T15:14:01Z",
+    "updated": "2026-11-16T15:14:01Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21229v1",
+    "html_url": "https://arxiv.org/html/2611.21229v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21229v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21177v1",
+    "title": "RAGE: Residual-Adaptive Gating for Flow-Based Image Editing",
+    "abstract": "Recent inversion-free, flow-based image editing methods evolve the source image toward the target via a differential velocity field. We observe that this velocity field does not explicitly account for which regions should be preserved, leading to unintended drift in non-editing regions. To address this, we formulate source fidelity control as a stochastic optimal control problem in which a selective fidelity term on the editing residual is enforced along the editing trajectory. Solving this problem and approximating its solution yields the Residual Gating Principle: each latent component is pulled back toward the source with a gain that decays exponentially with the local residual magnitude, so that small deviations are suppressed while large, semantically meaningful edits pass through unimpeded. The proposed method, RAGE, requires only one lightweight gated interpolation per sampling step, involves no mask estimation, attention maps, retraining, or architecture-specific modifications, and is applied on top of FlowEdit-based editors. On PIE-Bench, RAGE achieves the best overall rank among 17 methods and substantially improves background preservation on both Stable Diffusion 3 and FLUX backbones while maintaining competitive editing quality.",
+    "authors": [
+      "Ruofeng Mei",
+      "Xiangyu Xu"
+    ],
+    "published": "2026-11-16T14:36:53Z",
+    "updated": "2026-11-16T14:36:53Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21177v1",
+    "html_url": "https://arxiv.org/html/2611.21177v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21177v1.pdf",
+    "matched_keywords": [
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21168v1",
+    "title": "Beyond Token Stacking: Multi-scale Visual Modulation and Adaptive Fused-feature Calibration for MLLMs",
+    "abstract": "Current Multimodal Large Language Models (MLLMs) have advanced rapidly and follow two main paradigms: one involves concatenating visual and textual tokens for input into Large Language Model (LLM), while the other injects visual knowledge into Feed-Forward Networks (FFNs) of the LLM. However, the former introduces a large number of redundant visual tokens, substantially increasing computational overhead. The latter reduces sequence length but removes images from the input stage entirely, which may hinder the activation of image-related knowledge. Moreover, naively injecting visual knowledge into the FFNs could induce activation distribution shifts due to cross-modal semantic discrepancies. To address these challenges, we develop Beyond Token Stacking (BTS), a novel visual enhancement framework for MLLMs. Specifically, we propose a Multi-scale Visual Modulation (MVM) mechanism that injects multi-scale visual information at the input stage via modulation without increasing the token sequence length. Furthermore, we develop an Adaptive Fused-feature Calibration (AFC) module that performs per-channel affine calibration to decouple visual injection from distribution alignment in the FFN layers, improving multimodal fusion stability while preserving language priors. Experiments show that our approach achieves state-of-the-art performance.",
+    "authors": [
+      "Ye Xiao",
+      "Shesheng Song",
+      "Yi Ren",
+      "Shasha Li",
+      "Bin Ji",
+      "Xiaodong Liu",
+      "Jun Ma",
+      "Jie Yu"
+    ],
+    "published": "2026-11-16T14:30:07Z",
+    "updated": "2026-11-16T14:30:07Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21168v1",
+    "html_url": "https://arxiv.org/html/2611.21168v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21168v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21162v1",
+    "title": "DRaGAN: Dynamic Graph Attention Network for Multi-Radar Point Cloud Encoding in Automotive Radar Perception",
+    "abstract": "Radar represents a key modality for weather-robust perception. Unlike optical sensors such as camera and LiDAR, radar can penetrate fog, rain and snow due to its longer wavelength, and recent hardware advances have steadily improved its spatial resolution, thus making it increasingly relevant for autonomous systems. While processing raw radar data requires substantial memory computation, most existing work has focused on preprocessed point-cloud data similar to LiDAR. However, the sparse radar points and sensor-relative anisotropy make LiDAR-oriented encoders suboptimal. To address this problem, we present DRaGAN, a dynamic graph attention network for multi-radar point clouds. DRaGAN introduces a sensor-relative Fourier encoding of angle and range to capture fixed-aperture radar characteristics, gated short- and long-range hub nodes along each sensor's line of sight for efficient local-global message passing, and attention-guided dynamic rewiring that prunes weak edges and adds a bounded number of latent connections restricted to two-hop neighborhoods. This reduces the number of processed edges in deeper layers while preserving representation quality. On TruckScenes, DRaGAN improves test NDS by 10.10 points over the evaluated RadarGNN baseline and reduces the reported model FLOP count by 63.7%. This trade-off includes an increase in model latency from 40 to 53.16 ms and in trainable parameters from 1.2M to 1.7M on the evaluated implementations. Code and pretrained models are available at https://github.com/chr-is-tof/DRaGAN.",
+    "authors": [
+      "Christof Leitgeb",
+      "Thomas Puchleitner",
+      "Max Peter Ronecker",
+      "Daniel Watzenig"
+    ],
+    "published": "2026-11-16T14:26:24Z",
+    "updated": "2026-11-16T14:26:24Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21162v1",
+    "html_url": "https://arxiv.org/html/2611.21162v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21162v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21137v1",
+    "title": "Scribble Once, Segment the Sequence: Bidirectional Temporal Consistency for Weakly Supervised Segmentation in Echocardiography Sequences",
+    "abstract": "Temporal medical image segmentation relies on pixel-wise annotations, which are prohibitively expensive for long image sequences. Existing weakly-supervised methods reduce the annotation burden per frame but still require repeated annotations across the sequence. Furthermore, sparse supervision can result in temporally unstable representations. Addressing both challenges requires a model that can leverage strong spatial priors from large-scale pretraining while minimizing reliance on dense annotations. Frozen 2D vision foundation models provide a promising basis for this by offering transferable spatial representations with low trainable parameters. However, their lack of explicit temporal modeling limits their ability to propagate reliable information across anatomical sequences. To address this, we present a weakly-supervised framework for temporal segmentation from a single scribble-annotated frame, with all remaining frames left unlabeled. The framework combines parameter-efficient adaptation of DINOv3 encoders present in the mean-teacher architecture. Furthermore, a set of complementary losses, including a temporal loss helps generate reliable segmentation priors for the unlabeled frames. This formulation decouples annotation costs from sequence length while retaining the transferable spatial knowledge of the pretrained encoder. Extensive experiments on the publicly available CAMUS and CardiacNet datasets demonstrate that our approach outperforms other scribble-supervised methods. These results show that accurate and temporally consistent segmentation can be achieved from extremely sparse supervision, substantially reducing annotation requirements for temporal echocardiographic segmentation and providing a practical framework for scalable clinical deployment.",
+    "authors": [
+      "Vincent Li Weixin",
+      "Chen Jingkun",
+      "Vicente Grau"
+    ],
+    "published": "2026-11-16T14:12:25Z",
+    "updated": "2026-11-16T14:12:25Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21137v1",
+    "html_url": "https://arxiv.org/html/2611.21137v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21137v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21132v1",
+    "title": "Region-VAD: Video Anomaly Localization and Detection via Region Selection",
+    "abstract": "Anomalies are local events, yet weakly supervised video anomaly detection scores them globally. Most methods pool an entire frame into a single vector, rank frames by that vector, and derive a location afterwards as a saliency map of the score. Full-frame pooling mixes the anomaly with its background, so a detector can reach competitive benchmark scores from scene context without being able to show where in the scene the anomaly occurs. We introduce Region-VAD, which first selects a region and then detects the anomaly from that region alone. Region-VAD selects an explicit rectangle over the tokens of a frozen foundation model and scores anomalousness only from the tokens inside the box, through attention pooling followed by a standard temporal head. The rectangle is not learned, it is the box in which the frozen tokens change most between consecutive segments, in all four feature projections of the encoder, and it is found by exhaustive search over the rectangles of the token grid. Only the pooling and the temporal head are trained, from video-level labels without boxes, masks or frame-level annotations, and no trained component reads a token outside the selected region. Experiments on five datasets, with one localizer configuration shared by all datasets and backbones, show that Region-VAD achieves state-of-the-art anomaly localization on UCF-Crime and MSAD at competitive detection performance.",
+    "authors": [
+      "Giacomo D'Amicantonio"
+    ],
+    "published": "2026-11-16T14:09:21Z",
+    "updated": "2026-11-16T14:09:21Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21132v1",
+    "html_url": "https://arxiv.org/html/2611.21132v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21132v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21131v1",
+    "title": "How to Explain your Unexplainable Video Anomaly Detector",
+    "abstract": "Weakly-supervised Video Anomaly Detection (VAD) models assign anomaly scores from high-dimensional features, and their predictions remain unexplained. Saliency maps show where a model looks but not what it relies on, and the descriptions produced by Vision-Language Models (VLMs) are generated by branches that the anomaly score never reads. To address this faithfulness gap, we propose \\textbf{Explain The Unexplainable (ETU)}, a classifier-agnostic framework that audits frozen VAD models through counterfactual interventions in their feature space. ETU maps video features to a discrete dependency graph of agents, actions and outcomes ($A_r \\to A_a \\to A_o$), regenerates the features by graph-conditioned diffusion with selected nodes of the graph masked, and measures the change in the score of a frozen detector; one set of interventions is applied unchanged to every detector. The generator is trained only to reconstruct the input features, so it cannot learn the contrast it is asked to measure, and we validate the audit with experiments that test every alternative explanation of its results, from the cost of regeneration to random deletions of matched size. On UCF-Crime features obtained from a CLIP encoder, we show that substituting the scene semantics results in the largest drop for most detectors, and that removing the outcome chain of the graph ($Δ_{rel}$) changes the anomaly score of all six audited detectors far more than removing the same number of random nodes, even though the random deletion perturbs the features about as much. We show that this targeted behavior comes from the divergence objective of the graph embedding. Without it, the two interventions become indistinguishable, and with a divergence objective in the generator as well, the score change of the detector follows the displacement of the reconstruction rather than the semantics that were removed.",
+    "authors": [
+      "Giacomom D'Amicantonio",
+      "Egor Bondarev"
+    ],
+    "published": "2026-11-16T14:08:31Z",
+    "updated": "2026-11-16T14:08:31Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21131v1",
+    "html_url": "https://arxiv.org/html/2611.21131v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21131v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21126v1",
+    "title": "IGRecon4D: Dynamic-Object-Aware Feed-Forward Reconstruction of Driving Scenes",
+    "abstract": "Feed-forward 4D driving-scene reconstruction enables efficient modeling of dynamic autonomous-driving scenes, but current methods suffer from two complementary failure modes: semantic leakage of traffic participants into the static representation and geometric drift of Gaussian locations across viewpoints. We propose \\textbf{IGRecon4D}, a feed-forward dynamic scene reconstruction framework that addresses these failures with training-time instance-prior distillation and LiDAR-anchored Gaussian positioning. Specifically, an instance-level semantic branch provides a potentially dynamic participant prior, which is distilled into dynamic-mask learning through the Instance-Dynamic Consistency Constraint to encourage high-recall localization of traffic-participant regions prone to dynamic-static leakage. In parallel, sparse LiDAR measurements guide dense depth estimation, and the resulting depths are back-projected to anchor Gaussian positions for improved multi-view geometric consistency. Experiments on the Waymo Open Dataset and zero-shot evaluation on nuScenes demonstrate improved full-image reconstruction on the main benchmark and stronger traffic-participant-region reconstruction under cross-dataset evaluation.",
+    "authors": [
+      "Yifei Tong",
+      "Ziyang Huang",
+      "Yizhao Han",
+      "Xiaoxiao Long",
+      "Hao Zhu"
+    ],
+    "published": "2026-11-16T14:05:54Z",
+    "updated": "2026-11-16T14:05:54Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21126v1",
+    "html_url": "https://arxiv.org/html/2611.21126v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21126v1.pdf",
+    "matched_keywords": [
+      "representation",
+      "instance"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21114v1",
+    "title": "VAE Rhythm: Temporal Decoding Traces for AI-Generated Video Detection",
+    "abstract": "Visible artifacts are an unreliable cue for detecting generated videos, because newer generators learn to remove them. We instead detect a trace left by the generation pipeline itself. Most video generators decode latents with a 3D causal VAE that groups consecutive frames in time, so the fidelity of generated frames rises and falls periodically with their position in a group. We call this periodic trace VAE Rhythm. Real videos are captured frame by frame and do not have it. To reveal it without training, we propose a phase scan. The scan reconstructs a clip with an off-the-shelf VAE from successive start offsets and measures the periodicity of the reconstruction error across these offsets. We find VAE Rhythm in most of the 39 variants of 31 generators we test, including the closed-source Sora, Kling 3.0 and Seedance 2.0. We use the rhythm as a zero-shot score, as a plug-in for existing detectors and as a data engine that pairs real videos with their VAE reconstructions to train our detector CaDet. On DF26, the training-free rhythm score outperforms all 15 retrained baselines, and as a plug-in it improves all 19 tested detectors by 6.7% to 23.7% AUROC. CaDet achieves the best AUROC on AIGVDBench, DF26 and three 2026 closed-source models, and its variant trained without any generated video still exceeds 90% on AIGVDBench.",
+    "authors": [
+      "Ke Sun",
+      "Shuwei Li",
+      "Haiyang Mei",
+      "Mike Zheng Shou"
+    ],
+    "published": "2026-11-16T13:59:03Z",
+    "updated": "2026-11-16T13:59:03Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21114v1",
+    "html_url": "https://arxiv.org/html/2611.21114v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21114v1.pdf",
+    "matched_keywords": [
+      "video",
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21105v1",
+    "title": "CivilBench: Benchmarking Vision-Language Models for Multimodal Information Integration in Civil Engineering",
+    "abstract": "Artificial intelligence (AI), particularly large language models (LLMs) and vision-language models (VLMs), is increasingly applied in civil and structural engineering for disaster assessment, structural analysis, and engineering decision support. However, the extent to which current VLMs possess the reasoning capabilities required for reliable engineering judgments remains unclear. In this work, we introduce CivilBench, a comprehensive benchmark for evaluating VLMs in civil engineering and disaster-related scenarios. CivilBench covers three major task families: Sequential Reasoning, Image-based Structural Understanding, and Open-world Understanding, encompassing numerical reasoning, structural damage assessment, risk inference, causal analysis, and repair planning. The benchmark is constructed through a systematic pipeline of domain-specific data collection, engineering-oriented captioning, expert annotation, question design, and quality verification. Evaluation of representative state-of-the-art VLMs reveals substantial limitations in domain-specific reasoning, with Sequential Reasoning emerging as a major bottleneck, particularly when models must infer numerical relationships from sparse structured observations. Further experiments show that numerical priors and external knowledge can alleviate these limitations, although their effectiveness depends on the model's ability to reliably interpret and use the available evidence. CivilBench provides a capability-oriented testbed for identifying reasoning limitations and evaluating progress toward reliable AI-assisted engineering decision-making. The benchmark will be publicly available at https://huggingface.co/datasets/traceuryuan/CivilBench.",
+    "authors": [
+      "Dan Yuan",
+      "Yue Wen",
+      "Zhili He",
+      "Zhenkui Zhou",
+      "Shicen Liu",
+      "Ziqiang Zheng"
+    ],
+    "published": "2026-11-16T13:54:06Z",
+    "updated": "2026-11-16T13:54:06Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21105v1",
+    "html_url": "https://arxiv.org/html/2611.21105v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21105v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21104v1",
+    "title": "GRAZE: Text-Free Grasp Synthesis for Unseen Objects from Human Gaze",
+    "abstract": "Text-conditioned hand-object interaction (HOI) generation provides intuitive semantic control, but language is an indirect way to specify where an interaction should occur on an object. Naming the part to grasp requires object-specific words, and naming the approach side requires a reference frame that a prompt lacks. We propose GRAZE (GRAsp from gaZE), which generates hand-object grasp motion from recorded gaze instead of object and part names. Its Geometry-Aware Gaze Encoding (GeoGaze) maps gaze rays to cues on object geometry, and cross-attention conditions a diffusion Transformer on these cues. We also introduce HOT3D-Grasp, a grasp-centered benchmark with object-disjoint folds built on HOT3D recordings. On unseen objects, GRAZE grasps the target part more often than the strongest text-conditioned baseline (49.3% vs. 43.6%), achieves the highest grasp success (66.3% vs. 46.6%), and transfers without fine-tuning to GazeHOI (45.3% vs. 33.8%). Gaze conveys the approach side: when gaze is rotated around the object, the approach turns with it in 59.1% of cases, against 20.5% for a text model retrained with clock words. On the same backbone, a text prompt names parts better, but gaze adds the approach side. Given both, GRAZE keeps the prompt's part accuracy and follows gaze.",
+    "authors": [
+      "Jeongho Lee",
+      "Boeun Kim",
+      "Hyung Jin Chang",
+      "Jungchan Cho",
+      "Sang-Il Choi"
+    ],
+    "published": "2026-11-16T13:53:42Z",
+    "updated": "2026-11-16T13:53:42Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21104v1",
+    "html_url": "https://arxiv.org/html/2611.21104v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21104v1.pdf",
+    "matched_keywords": [
+      "3d",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21102v1",
+    "title": "Beyond Family Labels: A Taxonomic Ornstein-Uhlenbeck Prior for Avian 3D Shape Recovery",
+    "abstract": "Recovering 3D pose and shape of birds from single images is bottlenecked by the long tail of avian diversity: out of ~10,000 species, only a few dozen have 3D-labeled training data, and in-the-wild test sets routinely contain species never seen at training. Generalizing across clades is therefore a central problem. The current state of the art, AniMer+, mitigates it with a family-level contrastive loss that conveys only a binary same-family indicator per pair and discards the continuous structure of the species tree. We propose a taxonomic Ornstein-Uhlenbeck prior on the shape code of the AVES parametric bird mesh model: a multivariate Gaussian whose covariance decays exponentially with Linnaean rank distance, with a learnable selection strength and noise scale. The prior generalizes family contrastive into a continuous, generative form, exposing the graded cross- and within-family similarity that a binary indicator cannot, and brings continuous comparative phylogenetics in as a biology-grounded inductive bias for the long tail. Our method improves over AniMer+ on both metrics of the unseen-species CowBird benchmark and on CtrlAVES3D, while remaining comparable on seen-species CUB. A permutation ablation isolates taxonomic structure from generic Gaussian smoothing, and a rank-granularity ablation identifies cross-order distinctions (the structure beyond a family-vs-not indicator) as the dominant source of the unseen-species gain.",
+    "authors": [
+      "Yunchan Jeon",
+      "SooGon Kim",
+      "Seungwook Kim",
+      "CheolWon Lee",
+      "Jongmin Lee"
+    ],
+    "published": "2026-11-16T13:47:57Z",
+    "updated": "2026-11-16T13:47:57Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21102v1",
+    "html_url": "https://arxiv.org/html/2611.21102v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21102v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21098v1",
+    "title": "MedicalDPO: Multi-Objective Direct Preference Optimization for CT to PET Translation",
+    "abstract": "CT-to-PET synthesis estimates functional PET images from anatomical CT scans for auxiliary analysis, representation pretraining, and missing-modality completion. Brownian Bridge diffusion models can produce multiple PET candidates of different quality under the same CT condition, exposing an intra-condition quality hierarchy. Candidate quality spans complementary spatial, structural, and intensity dimensions, while DPO-only fine-tuning may compromise absolute synthesis fidelity. We propose MedicalDPO which converts this hierarchy into preference supervision automatically constructed from paired CT-PET training data. Multiple candidates are ranked across the three fidelity dimensions, and strict cross-metric verification retains preferred-rejected pairs with consistent quality separation. Relative denoising-error preference optimization is jointly trained with the original Brownian Bridge objective to anchor the pretrained CT-to-PET mapping, while condition-balanced multi-pair rotation distributes preference supervision across CT conditions. Experiments on BBDM and CPDM show improvements across LPIPS, MAE, SSIM, and PSNR. Further analyses demonstrate metric complementarity and clear pair separation, while ablations show that the original training objective prevents the substantial degradation caused by DPO-only fine-tuning.",
+    "authors": [
+      "Huiting Zhang",
+      "Yingxin Cai",
+      "Siyuan Wang",
+      "Xi Yang",
+      "Yuyao Yan",
+      "Rui Zhang",
+      "Kaizhu Huang"
+    ],
+    "published": "2026-11-16T13:43:31Z",
+    "updated": "2026-11-16T13:43:31Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21098v1",
+    "html_url": "https://arxiv.org/html/2611.21098v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21098v1.pdf",
+    "matched_keywords": [
+      "representation",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21085v1",
+    "title": "State-Message Interaction Adapter for Cross-Domain Few-Shot Segmentation",
+    "abstract": "Cross-domain few-shot segmentation adapts natural-image pretrained encoders to medical or industrial domains from a few pixel-annotated support masks. Within frozen DINOv3, intermediate per-head attention messages already carry target-background distinctions that baseline final-layer similarities and predictions do not consistently reflect. We propose the State-Message Interaction Adapter (SMIA) to learn how per-head messages should update each receiving token representation while keeping pretrained attention and FFN parameters frozen. Inserted right after per-head aggregation, SMIA conditions the transformation of each head's aggregated output (message) on each patch's pre-attention feature (state), allowing similar contextual messages to produce distinct or opposing updates depending on the receiving position. Because scarce support masks cover only limited state-message combinations, a shared low-rank bilinear map confines the learned interactions to low-dimensional state, message, and output subspaces. Added before each adapted block's frozen FFN, these updates yield adapted features that are refined by frozen FFNs and deeper blocks for linear readout. With only 0.51M trainable parameters and single-pass, support-free inference, SMIA achieves six-dataset mean mIoUs of 77.40% at 5 shots and 80.99% at 10 shots across 20 medical and industrial tasks, surpassing the strongest prior methods by +3.61 and +3.93 percentage points. In controlled 10-shot comparisons across three benchmarks on the same DINOv3 backbone, SMIA also outperforms parameter-matched AdaptFormer, LoRA, and ParaX with a better precision-recall balance.",
+    "authors": [
+      "Hang Xing",
+      "Yan Xia",
+      "Yongjiang Liu",
+      "Siqi Zhang",
+      "Xueming Ding"
+    ],
+    "published": "2026-11-16T13:32:47Z",
+    "updated": "2026-11-16T13:32:47Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21085v1",
+    "html_url": "https://arxiv.org/html/2611.21085v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21085v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21060v1",
+    "title": "MetricHand: Geometry-Aware Flow Matching for 4D Hand Reconstruction in Metric World Space",
+    "abstract": "Egocentric hand motion provides physical motion supervision for dexterous manipulation and vision-language-action pretraining. Reliable use of this supervision requires accurate and temporally coherent 4D hand reconstruction in metric world space. Existing methods typically lift framewise estimates produced under weak perspective into world coordinates. By ignoring joint-dependent depth variation at close range, this approximation couples errors in translation, orientation, and articulation that persist after world lifting and worsen under occlusion. We present MetricHand, a geometry-aware flow matching framework for 4D hand reconstruction in metric world space. MetricHand encodes depth priors from hand-object interaction regions into joint-associated representations that preserve local spatial structure and metric scale. Fused with visual features, this geometry guides coarse metric estimation and conditions every step of temporal generation. The model jointly recovers world-space translation, global orientation, MANO articulation, and shape, while structural priors and temporal context support estimation under partial occlusion. MetricHand reduces camera-space MPJPE by 49.3% and 52.9%, absolute world-space MPJPE by 28.7% and 21.7%, and wrist localization error by 48.5% and 37.9% relative to HaWoR, respectively. World-space acceleration error decreases by 44.2% and 64.3%, demonstrating improved temporal fidelity alongside more accurate absolute localization.",
+    "authors": [
+      "Yibo Bai",
+      "Likui Zhang",
+      "Jinglei Zhang",
+      "Zhengbin Pang",
+      "Xingshen Song",
+      "Xiaoqing Yin",
+      "Jinsheng Deng"
+    ],
+    "published": "2026-11-16T13:11:40Z",
+    "updated": "2026-11-16T13:11:40Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21060v1",
+    "html_url": "https://arxiv.org/html/2611.21060v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21060v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21044v1",
+    "title": "Body of Evidence: Triangulating 3D Human Pose with Geometry-Conditioned Depth",
+    "abstract": "Even in multi-camera setups, occlusions can leave individual body joints with only a single usable 2D observation. Such an observation defines a viewing ray but leaves the joint's depth undetermined. We introduce Body of Evidence (BoE), a multi-view 3D human pose estimator that predicts per-camera joint depths alongside 2D joint locations. To reduce monocular depth ambiguity, we propose geometry-conditioned depth prediction, which combines image features with previously reconstructed 3D body geometry as contextual depth cues. We further introduce learnable depth-aware triangulation (LDAT), which augments differentiable algebraic triangulation with predicted depth constraints, enabling reconstruction even from a single contributing camera while preserving the benefits of geometric triangulation when multiple views are available. The reconstructed 3D poses subsequently guide depth prediction in the next iteration, allowing depth estimates and 3D geometry to progressively refine each other. Experiments on CMU Panoptic demonstrate state-of-the-art in-domain performance and superior average performance across evaluated camera subsets and unseen camera arrangements. BoE is particularly effective under sparse camera coverage, outperforming the previous state of the art by 10.6 AP25 points in the challenging three-camera setting.",
+    "authors": [
+      "Erik Brorsson",
+      "Kilian Freitag",
+      "Josef Bengtson",
+      "Kristofer Bengtsson",
+      "Lars Hammarstrand",
+      "Knut Åkesson",
+      "Fredrik Kahl"
+    ],
+    "published": "2026-11-16T12:59:39Z",
+    "updated": "2026-11-16T12:59:39Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21044v1",
+    "html_url": "https://arxiv.org/html/2611.21044v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21044v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21038v1",
+    "title": "ScoutCache: Efficient Few-Step Autoregressive Video Diffusion via Conditional Readout and Selective Caching",
+    "abstract": "Few-step autoregressive video diffusion enables efficient long video generation, but inference still incurs substantial computational costs from repeated denoising and KV cache operations. Existing acceleration methods reduce parts of this overhead, while historical KV reading and cache construction remain costly across video chunks. To address these challenges, we propose ScoutCache, a training-free framework that jointly optimizes denoising, historical KV reading, and cache construction. We observe that shallow feature changes provide useful information for estimating clean latent updates, while historical KV dependence varies across Transformer layers and attention heads but remains relatively stable across video chunks. Based on these observations, we develop Conditional Denoising Readout (CDR) to estimate intermediate denoising updates from shallow feature changes and known noise variations. We further introduce Output Risk Guided Historical KV Reading (ORHR) to allocate historical reading budgets based on attention output perturbations, and Content and Coverage Guided Sparse Cache Construction (CCSC) to reduce cache construction costs by selecting informative spatial tokens while maintaining spatial coverage. Extensive experiments on Self-Forcing and LongLive using VBench and MovieGen demonstrate that ScoutCache achieves up to 2.28$\\times$ and 1.86$\\times$ speedups, respectively, while consistently improving generation quality without modifying pretrained model parameters.",
+    "authors": [
+      "Hao Tan",
+      "Jinghui Qin",
+      "Xuming Hu"
+    ],
+    "published": "2026-11-16T12:57:16Z",
+    "updated": "2026-11-16T12:57:16Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21038v1",
+    "html_url": "https://arxiv.org/html/2611.21038v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21038v1.pdf",
+    "matched_keywords": [
+      "video",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.21029v1",
+    "title": "Sparse Attention for Visual Generation: Toward Algorithm-System Co-Design",
+    "abstract": "Rapid advances in image and video generation have enabled high-fidelity synthesis at higher resolutions and longer durations, making the quadratic cost of dense self-attention a major bottleneck as visual token sequences grow. Sparse attention seeks to preserve generation quality at lower computational cost by retaining informative query-key interactions and omitting less consequential ones, with end-to-end gains depending on the cost of constructing sparse support and the efficiency with which the system maps the resulting workload to hardware. We survey sparse attention for visual generation through a 4+1+3 analytical framework that links algorithmic design to system implementation. The framework examines how static and dynamic methods use source information and the evidence derived from it to decide which interactions to retain and at what granularity, while accounting for the roles of reuse in reducing repeated computation and correction in compensating for omitted contributions. We relate these algorithmic choices to their implementation on hardware through the framework's three system dimensions of data organization, execution, and dataflow. We summarize common evaluation metrics and discuss open challenges and research directions, providing researchers and practitioners with a reference for the joint design of sparse attention algorithms and systems.",
+    "authors": [
+      "Majun Zhang",
+      "Yuan Guo",
+      "Decheng Wu",
+      "Jiayang Xu",
+      "Changhao Pan",
+      "Fan Zhuo",
+      "Xiaoda Yang",
+      "Chenyuhao Wen",
+      "Zhou Zhao"
+    ],
+    "published": "2026-11-16T12:48:15Z",
+    "updated": "2026-11-16T12:48:15Z",
+    "abstract_url": "https://arxiv.org/abs/2611.21029v1",
+    "html_url": "https://arxiv.org/html/2611.21029v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21029v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20992v1",
+    "title": "MedJev: A System One Vision-Language Decision Model for Fast and Effective Medical Image Understanding",
+    "abstract": "Medical image understanding with vision-language models (VLMs) typically relies on autoregressively generating reasoning and answer tokens. These unnecessary tokens make the inference cost scale with the response length and force the answer to be parsed from free-form text, incurring avoidable latency and decision errors. To this end, we introduce \\textsc{MedJev}, a \\emph{system one} vision-language decision model that maps medical images, questions, and candidate answers directly to decisions in a single multimodal forward pass, without any autoregressive generation process. For fast inference, \\textsc{MedJev} removes the upper language layers and the generative output pathway, while keeping the full vision pathway and all visual tokens. On this shortened backbone, a decision head scores each candidate by pretrained query--key matching and refines the scores with a lightweight multilayer perceptron (MLP) residual, coupling the pretrained matching structure with task-specific nonlinear discrimination. Built on Qwen3.5-4B, \\textsc{MedJev}-4B improves both accuracy and speed over the original model on each of four medical image classification and visual question answering benchmarks, with an absolute accuracy gain of \\textbf{7.93\\%} and a \\textbf{6.04$\\times$} end-to-end speedup. Further comparison with 20 cutting-edge models shows that \\textsc{MedJev}-4B achieves state-of-the-art performance and inference speed among 4B--9B general and medical VLMs, indicating that direct multimodal decision making is an effective route to fast and effective medical image understanding.",
+    "authors": [
+      "Fan Zhang",
+      "Hao Wu",
+      "Jinyang Wu",
+      "Hongyu Qu",
+      "Zheng Lian",
+      "Dongfu Yin",
+      "Qingsong Wen",
+      "Pheng-Ann Heng"
+    ],
+    "published": "2026-11-16T12:21:42Z",
+    "updated": "2026-11-16T12:21:42Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20992v1",
+    "html_url": "https://arxiv.org/html/2611.20992v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20992v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20971v1",
+    "title": "FAVR: Flow-Aware Visual Residual Alignment for Vision-Language-Action Policies",
+    "abstract": "Pretrained video representations provide rich temporal information for robotic manipulation, yet effectively integrating them into existing vision-language-action (VLA) policies remains challenging. We present Flow-Aware Visual Residual Alignment (FAVR), a lightweight framework for flow-aware visual conditioning of frozen VLA policies. FAVR maintains a compact temporal visual state through linear Test-Time Training (TTT) and retrieves action-conditioned visual features throughout flow-based action generation. By exploiting the affine structure of the frozen action head, we explicitly characterize how injected visual features influence predicted action velocities and formulate flow-aware channel selection as a box-constrained optimization problem. We develop a FISTA-based solver for joint gate optimization and derive an efficient closed-form approximation through diagonalization and rescaling. With only 1.74-2.19M trainable parameters and 5,000 adaptation steps, FAVR improves pretrained VLA policies across benchmarks. On RoboTwin 2.0, FAVR improves LingBot-VLA from 87.12% to 90.04% under clean conditions and from 86.88% to 89.38% under randomized conditions. A controlled ablation on five RoboTwin tasks further shows that flow-aware gating increases average success from 72.0% with a gate shared across flow steps to 82.0%, demonstrating the benefit of adapting visual conditioning throughout action generation.",
+    "authors": [
+      "Qixuan Wu",
+      "Xiaole Yang",
+      "Yuguang Yang",
+      "Canyu Chen",
+      "Linlin Yang",
+      "Haixia Pan",
+      "Guodong Guo",
+      "Baochang Zhang"
+    ],
+    "published": "2026-11-16T12:09:06Z",
+    "updated": "2026-11-16T12:09:06Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20971v1",
+    "html_url": "https://arxiv.org/html/2611.20971v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20971v1.pdf",
+    "matched_keywords": [
+      "video",
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20936v1",
+    "title": "ReAccess: Look Once, Stay Focused with Efficient Test Time Memory",
+    "abstract": "Despite recent advances, vision-language models (VLMs) still struggle with fine-grained visual understanding, often failing to effectively utilize critical evidence already encoded in their visual representations. Existing approaches address this limitation through repeated visual processing or explicit reasoning, introducing substantial computational overhead. In this paper, we propose ReAccess, a lightweight framework that preserves and reuses question-relevant visual evidence through compact associative memory. Constructed during a single visual prefill, the memory supports progressive evidence retrieval that steers both attention queries and hidden representations, enabling effective visual grounding without repeated image encoding or explicit reasoning traces. Extensive experiments demonstrate consistent improvements in both general visual understanding and fine-grained perception, while achieving substantially faster inference than existing reasoning-intensive approaches, demonstrating a promising path to efficient multimodal reasoning.",
+    "authors": [
+      "Tianhao Chen",
+      "Yilong Fan",
+      "Yuheng Wu",
+      "Xiaobin Hu",
+      "Dongman Lee"
+    ],
+    "published": "2026-11-16T11:46:36Z",
+    "updated": "2026-11-16T11:46:36Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20936v1",
+    "html_url": "https://arxiv.org/html/2611.20936v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20936v1.pdf",
+    "matched_keywords": [
+      "retrieval",
+      "representation",
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20916v1",
+    "title": "EviBridge: Encoding Predictive Visual Evidence for Proactive Interaction",
+    "abstract": "Tool-handover interaction calls for preparation before a response is warranted. The model waits until interaction cues appear, then prepares while assessing whether the accumulating evidence supports a response or calls for cancellation. We introduce EviBridge, a framework that integrates predictive visual representations into a vision-language interaction model for joint state and tool prediction. A trainable evidence interface maps features from a frozen V-JEPA 2 encoder into the language decoder alongside native visual inputs, preserving their temporal context and using only observations available at each decision time. The framework has two instantiations. EviBridge-E distinguishes recent from historical evidence and encodes the timing and spatial location of each observation. EviBridge-I preserves the temporal order of pooled V-JEPA 2 features and interaction turns and generates dedicated interaction tokens. We evaluate on FuGIBench, a streaming-video benchmark for preparation, response, and cancellation in tool-handover assistance. The best-performing variants of EviBridge-E and EviBridge-I achieve Overall scores of 0.6448 and 0.5892, compared with 0.2178 and 0.5327 for their respective task-adapted native baselines. These gains span target handovers, long waits, and cancelled requests, demonstrating the value of predictive visual evidence for interaction decisions.",
+    "authors": [
+      "Zhichao Huang",
+      "Changheng Cai",
+      "Song Ren",
+      "Zhichen Zhao",
+      "Hongsen Liu",
+      "Chaoyang Zheng",
+      "Wenxi Wu",
+      "Yichen Long",
+      "Yuan Fang",
+      "Luya Wang",
+      "Gufeng Liu",
+      "Yuchen Wang"
+    ],
+    "published": "2026-11-16T11:27:08Z",
+    "updated": "2026-11-16T11:27:08Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20916v1",
+    "html_url": "https://arxiv.org/html/2611.20916v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20916v1.pdf",
+    "matched_keywords": [
+      "video",
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20913v1",
+    "title": "Palmprint Decomposer: Interpretable and Editable Factorization via Synthetic Learning and Instance-Wise Refinement",
+    "abstract": "Palmprint recognition and synthesis methods focus on extracting discriminative textures or generating images with varied textures and appearances. However, they do not generally provide an explicit image-level representation that separates palmprint texture from its underlying base appearance for independent analysis or controlled editing. We introduce Palmprint Decomposer, an interpretable framework that represents a palmprint through independently editable factors and reconstructs the image through a multiplicative composition model. A color map and a light map characterize the base appearance, while a structure map and a global texture strength parameter describe texture modulation. However, accurate reconstruction alone does not guarantee separation of palmprint texture from base appearance, as fine palmprint textures may leak into the estimated base appearance. To mitigate this ambiguity, we train the decomposer exclusively on synthetic data with direct factor supervision, using asymmetric decoding paths and decomposition constraints to suppress texture leakage. Instance-Wise Refinement further improves real-image reconstruction by directly optimizing the predicted factors for each input without relying on the trained network. Experiments across seven datasets demonstrate high reconstruction fidelity, with the extracted structure maps generally achieving verification performance comparable to the original images. Compared with existing methods, our approach achieves better factor separation while preserving more discriminative palmprint texture information.",
+    "authors": [
+      "Licheng Yan",
+      "Yuqi Wang",
+      "Jingtao Wang",
+      "Bob Zhang",
+      "Andrew Beng Jin Teoh",
+      "Lu Leng",
+      "Shuyi Li",
+      "Ziyuan Yang"
+    ],
+    "published": "2026-11-16T11:24:22Z",
+    "updated": "2026-11-16T11:24:22Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20913v1",
+    "html_url": "https://arxiv.org/html/2611.20913v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20913v1.pdf",
+    "matched_keywords": [
+      "representation",
+      "instance"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20899v1",
+    "title": "SciWorldBench: Do Video World Models Really Understand Scientific Experiments?",
+    "abstract": "While the ability of video generation models to accurately depict scientific phenomena has received growing attention, determining whether these models genuinely understand the underlying principles remains a critical challenge. Existing benchmarks typically evaluate video samples in isolation, making it difficult to expose models that simply fit superficial visual priors. In scientific experiments, a small change in one condition produces a markedly different outcome even when the rest of the setup remains fixed. Capitalizing on this sensitivity, we introduce SciWorldBench, a benchmark comprising paired scientific experiments. Each pair varies a single condition in an otherwise fixed setup, yielding two mutually exclusive expected outcomes. Each generation prompt specifies the condition but omits the expected outcome. We evaluate ten text-and-image-to-video (TI2V) models using an independent vision-language model (VLM) that assesses each video without access to the condition text or the label identifying the correct outcome. A pair is scored as correct only when both videos depict their respective scientifically correct outcomes. Across all ten models, we find that the two videos in an experimental pair frequently depict the same outcome even though the conditions require different results. This recurring failure suggests that current video world models struggle to apply the underlying scientific principles reliably during generation. We will publicly release the benchmark dataset and open-source the evaluation code.",
+    "authors": [
+      "Xue Yang",
+      "Haonan Cai",
+      "Xinyu Hang",
+      "Zhimeng Huang",
+      "Xuanyi Liu",
+      "Chuanmin Jia",
+      "Siwei Ma"
+    ],
+    "published": "2026-11-16T11:09:07Z",
+    "updated": "2026-11-16T11:09:07Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20899v1",
+    "html_url": "https://arxiv.org/html/2611.20899v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20899v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20885v1",
+    "title": "ProSE: Probing Reconstruction Error for Semantic-guided Expert Skipping in MoE-MLLMs",
+    "abstract": "Mixture-of-Experts Multimodal Large Language Models (MoE-MLLMs) offer scalable inference through sparse expert activation, yet substantial computational redundancy remains among the activated experts. Existing expert skipping methods typically calibrate thresholds based on target skipping ratios or final-output divergence, overlooking the accumulation of skipping-induced error across layers and the varying semantic importance of individual tokens. To address that, we propose ProSE, a training-free, semantic-guided expert skipping framework that probes layer-wise reconstruction error to promote representation consistency compared with default activation. Specifically, we construct query-aware semantic masks to identify salient visual tokens and progressively calibrate modality-specific skipping thresholds for each MoE layer. By minimizing masked reconstruction error under a given budget, ProSE maintains semantic consistency after skipping and allows adaptive expert allocation under limited activation budgets. Extensive experiments on 9 benchmarks demonstrate consistent improvements on average over existing expert skipping methods, particularly under aggressive skipping settings. ProSE maintains over 96\\% performance on KimiVL-A3B-Inst with 83\\% expert skipping and accelerates prefilling by $1.7\\times$.",
+    "authors": [
+      "Jiameng Li",
+      "Minye Wu",
+      "Matthew B. Blaschko"
+    ],
+    "published": "2026-11-16T10:56:20Z",
+    "updated": "2026-11-16T10:56:20Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20885v1",
+    "html_url": "https://arxiv.org/html/2611.20885v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20885v1.pdf",
+    "matched_keywords": [
+      "representation",
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20864v1",
+    "title": "LiDSeg: Linear DehazeFormer Guidance for Efficient Semantic Segmentation in Adverse Weather Conditions",
+    "abstract": "Robust semantic segmentation in adverse weather is essential for safety-critical autonomous systems. Existing restore-then-segment pipelines introduce latency and prioritize pixel-level restoration over semantic discriminability, while domain adaptation methods often face representation bottlenecks and computational complexity. We introduce LiDSeg, a framework that uses reconstruction-informed guidance to improve segmentation under adverse weather. During training, a lightweight guidance encoder is jointly optimized with the segmentation branch using segmentation and auxiliary reconstruction objectives. At inference, the reconstruction decoder is discarded, while the guidance encoder is retained to extract weather-robust features. A lightweight gated fusion module integrates these features into the segmentation branch, preserving clear-weather accuracy while improving adverse-weather robustness. On Foggy Cityscapes, LiDSeg limits the clear-to-dense-fog mIoU degradation to 2.5-2.8 percentage points, reducing the baseline performance drop by more than fivefold. On the official ACDC test server, LiDSeg-PIDNet achieves 75.07% pooled all-condition mIoU, comparable to supervised HRNet-W48 at 75.0%, while remaining substantially smaller. The gains generalize zero-shot to Foggy Driving and Foggy Zurich without training on real-fog images. LiDSeg adds only 1.9-3.1M parameters across several models, with total model sizes of 5.2-39.5M parameters and no inference-time reconstruction overhead. It delivers real-time inference on the NVIDIA Jetson AGX Orin. Code: https://github.com/yobsanb/LiDSeg",
+    "authors": [
+      "Yobsan Bayisa Leta",
+      "Christos Kyrkou",
+      "Maria K. Michael",
+      "Theocharis Theocharides"
+    ],
+    "published": "2026-11-16T10:38:33Z",
+    "updated": "2026-11-16T10:38:33Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20864v1",
+    "html_url": "https://arxiv.org/html/2611.20864v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20864v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20840v1",
+    "title": "Interpretable deep concepts of organoid morphology",
+    "abstract": "Image-based classification of organoid morphologies can indicate drug response, viability, or successful differentiation. In recent work, learned representations outperform handcrafted features as the basis for downstream classifiers. However, their black-box nature hides the morphological cues a classifier relies on. Based on the foundation models DINOv3 (general-purpose) and ViTAMIn-O (organoid-specific), we train sparse autoencoders (SAEs) to learn interpretable concepts related to distinct organoid morphologies. We annotate concepts with spatial labels (organoid, organoid wall, background) and compute their dataset specificity and task relevance across five tasks. The spatial labels of DINOv3 concepts yield coarse organoid segmentations on out-of-domain datasets. Filtering concepts by spatial label in the DINOv3-SAE improves downstream AUROC for three of the five tasks. Qualitative analysis of the most relevant concepts further reveals a confounding factor introduced by our preprocessing in one task. Through such insights, interpretable concepts could help improve the reliability of classifiers and guide the future development of organoid representation models. The trained SAEs will be made available upon publication.",
+    "authors": [
+      "Lion Jasper Gleiter",
+      "Tingying Peng"
+    ],
+    "published": "2026-11-16T10:20:56Z",
+    "updated": "2026-11-16T10:20:56Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20840v1",
+    "html_url": "https://arxiv.org/html/2611.20840v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20840v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20805v1",
+    "title": "An Efficient Training Paradigm for Image Restoration via Improved Fréchet Loss",
+    "abstract": "Diffusion-based image restoration achieves strong perceptual quality but typically relies on iterative sampling, leading to slow inference. Existing single-step methods often use diffusion distillation or adversarial training, complicating optimization. To simplify training, we propose FDIR, a framework for training single-pass generative restoration models through regression-style supervised optimization using directly computable objectives. To realize this paradigm, FDIR employs the Fréchet distance to match the feature distributions of restored and real images in frozen representation spaces, providing explicit distribution-level supervision. To better accommodate image restoration, we incorporate local patch features to capture fine-grained restoration discrepancies. Moreover, we introduce instance-adaptive statistics by combining the feature moments of each SR-HQ pair with synchronized historical statistics, allowing distribution matching to incorporate input-specific correspondence while retaining distribution-level context. FDIR optimizes only the LoRA parameters of the restoration backbone. Experiments demonstrate strong perceptual restoration quality and efficient training, suggesting a simpler paradigm for generative image restoration.",
+    "authors": [
+      "Shanyuan Jie",
+      "Wu Shi",
+      "Xinqi Lin",
+      "Kainan Yan",
+      "Zian Wang",
+      "Yingxue Pang",
+      "Yan Wang",
+      "Shijie Zhao",
+      "Chao Dong"
+    ],
+    "published": "2026-11-16T09:50:08Z",
+    "updated": "2026-11-16T09:50:08Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20805v1",
+    "html_url": "https://arxiv.org/html/2611.20805v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20805v1.pdf",
+    "matched_keywords": [
+      "representation",
+      "instance",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20797v1",
+    "title": "Correspondence-Free Camera Pose Estimation by Matching Moments",
+    "abstract": "The blind perspective-$n$-point (PnP) problem is to estimate the pose of a calibrated camera from 2D and 3D point sets with unknown correspondences. We show that, for complete, noiseless observations, fourteen permutation-invariant image moments up to order four identify a fixed camera pose for almost every 3D point set containing at least twenty points. Our learning-free method, MomentPnP, matches these moments between the observed 2D points and the projected 3D points to initialize a camera pose without correspondences and refines the pose and correspondence weights using expectation--maximization. Across the test sets of three benchmarks, our method reduces median rotation error by $5$--$170\\times$ relative to the best learned baseline, both with and without outliers. We recover accurate poses even with as many outliers as inliers. On dense ETH3D scans, pose accuracy improves as the point sets grow, even as individual correspondences become harder to resolve.",
+    "authors": [
+      "Subhransu S. Bhattacharjee",
+      "Dylan Campbell",
+      "Rahul Shome"
+    ],
+    "published": "2026-11-16T09:44:04Z",
+    "updated": "2026-11-16T09:44:04Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20797v1",
+    "html_url": "https://arxiv.org/html/2611.20797v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20797v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20788v1",
+    "title": "VA-Assembly: View-Aligned Score Guidance for Training-Free 3D Part Assembly",
+    "abstract": "Image-to-3D foundation models have improved 3D reconstruction, but typically produce monolithic representations without explicit part-level structure. Part-aware generation and learning-based assembly methods often require part-level supervision, category-specific priors, or paired part-layout training data. We instead consider a practical but underexplored setting in which independently prepared or generated 3D parts have no predefined inter-part relationships, shared coordinate frames, or consistent scales, and must be assembled into a reference-consistent object from a single image. We present VA-Assembly, a training-free framework for 3D part assembly through part-level transformation estimation using view-aligned diffusion guidance. Given a reference image and fixed 3D part geometries, VA-Assembly optimizes each part's translation, rotation, and scale. We condition a frozen view-conditioned diffusion model on same-view renderings of a reference-derived monolithic 3D representation, producing score gradients geometrically aligned with the part configuration. This guidance provides multi-view structural cues under large initial misalignment. By repurposing pretrained visual-structural priors as transformation-level supervision, VA-Assembly requires no annotated part layouts, predefined part taxonomies, category-specific assembly training, or bounding-box-based layout initialization. Experiments compare VA-Assembly with geometric registration and compositional layout baselines using each baseline's supported transformation components, showing improved part-wise transformation estimation. Ablation studies show that view-aligned conditioning, rather than diffusion guidance alone, is critical for reliable transformation gradients. Updating only part transformations preserves explicit component separability and supports component-level editing, replacement, and reconfiguration.",
+    "authors": [
+      "Yeon-Jae Kim",
+      "Sangwon Kang",
+      "Byung-Kwon Min"
+    ],
+    "published": "2026-11-16T09:35:46Z",
+    "updated": "2026-11-16T09:35:46Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20788v1",
+    "html_url": "https://arxiv.org/html/2611.20788v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20788v1.pdf",
+    "matched_keywords": [
+      "3d",
+      "representation",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20787v1",
+    "title": "PhaseCLIP: Phase-Aware Frequency-Domain Adaptation of Vision-Language Models for Few-Shot Remote-Sensing Classification",
+    "abstract": "Remote-sensing (RS) image scene classification aims to assign a semantic category to an overhead image, and in practice must often do so from only a handful of labelled examples, since annotation requires expert interpretation and the resulting labels transfer poorly across sensors and regions. Recent progress has come from adapting vision-language models (VLMs) such as CLIP, through learned prompts or feature adapters. Although effective, these methods construct their representation entirely in the spatial domain. RS scenes are dominated by periodic texture and regular geometry, which the Fourier spectrum describes compactly through an amplitude component, carrying texture and contrast statistics, and a phase component, carrying spatial structure. Existing frequency-domain adaptation of VLMs either exploits amplitude alone or does not separate amplitude from phase, leaving the structural component unused. In this article, we propose PhaseCLIP, which inserts phase-capable spectral modules and a feature-gating module into a frozen CLIP visual encoder and trains only 1.30% of its parameters. Because the amplitude and phase pathways share an identical parameter layout, a single weight set is learned on phase and transferred exactly to amplitude, giving a two-stage scheme that adds no parameters. Experiments on five public RS datasets, EuroSAT, PatternNet, UC Merced, LSRS and RSSCN7, against eight baselines under a matched protocol, show that PhaseCLIP attains 84.28% mean accuracy and is the best method in 23 of 30 dataset-by-shot cells, with phase contributing 1.93 points overall and 4.36 points on the most difficult dataset. Because the modules act on the spectrum of image patches and transformer tokens and leave the text encoder untouched, the approach can be extended to other RS sensors and tasks, and to other domains in which class evidence lies in spatial structure.",
+    "authors": [
+      "Mehmet Sergen Catal",
+      "Abdurrahman Gumus",
+      "Mehmet Zübeyir Ünlü"
+    ],
+    "published": "2026-11-16T09:34:13Z",
+    "updated": "2026-11-16T09:34:13Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20787v1",
+    "html_url": "https://arxiv.org/html/2611.20787v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20787v1.pdf",
+    "matched_keywords": [
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20779v1",
+    "title": "EEGProbe: Do Vision-Language Models Really Understand EEG? A Benchmark for Signal-Grounded EEG Signals Evaluation",
+    "abstract": "Vision-language models (VLMs) have shown strong multimodal capabilities across scientific and biomedical domains, yet their ability to understand electroencephalography (EEG) signals remains unclear. We introduce EEGProbe, a signal-grounded benchmark for evaluating whether general-purpose VLMs can extract and reason from minimally processed, channel-wise EEG without task-specific feature engineering or EEG-specific adaptation. EEGProbe contains 620 EEG-centered questions across 13 subtasks and three capability categories: EEG Signal Classification, EEG Cross-modal Alignment, and EEG Neurophysiological Reasoning. To reduce shortcut-based answering, EEGProbe preserves the temporal structure of the recordings where possible, minimizes benchmark-induced processing, and applies signal-necessity testing followed by expert verification. We evaluate 11 representative open- and closed-source VLMs under a unified zero-shot protocol. The strongest model, GPT-5.6 Sol, achieves an overall score of only 41.63\\%, with cross-modal EEG alignment emerging as a major bottleneck. We further examine model behavior from a neurophysiological perspective and analyze how temporal, spectral, spatial, and physiological EEG structure relates to model successes and failures. Inference-time neurophysiological guidance can reshape model predictions by helping models recognize the neurophysiological patterns present in the input and connect them with relevant neurological knowledge, narrowing the gap between general multimodal competence and EEG understanding. EEGProbe provides a testbed for current VLMs and a basis for developing future multimodal models that can interpret EEG evidence more reliably. The EEGProbe benchmark will be publicly available at https://huggingface.co/datasets/2122ZHU/EEGProbe.",
+    "authors": [
+      "Haozhe Zhu",
+      "Dan Yuan",
+      "Chenghao Gu",
+      "Feike Xu",
+      "Yue Wen",
+      "Shin'ichi Konomi"
+    ],
+    "published": "2026-11-16T09:27:44Z",
+    "updated": "2026-11-16T09:27:44Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20779v1",
+    "html_url": "https://arxiv.org/html/2611.20779v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20779v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20767v1",
+    "title": "UNITE: Consolidating Embodied VLM Specialists via Shared-Anchor One-Bit Factorization",
+    "abstract": "Embodied capabilities such as visual grounding, spatial reasoning, navigation, and driving understanding are often developed in separate vision-language specialists fine-tuned from a common pretrained model.Deploying the specialists separately multiplies storage, whereas merging them into one dense model forces conflicting task updates to share parameters and loses part of each specialist's expertise.We introduce UNITE, a framework that consolidates such specialists into a compact shared-backbone mixture of experts. UNITE keeps the feed-forward block of each specialist as a routable expert and represents the expert bank through a shared-anchor one-bit factorization: a shared floating-point anchor plus expert-specific, row-scaled binary deviations.The anchor is optimized jointly with the scales and signs through closed-form alternating updates, using only source weights and no calibration data.Router adaptation then adjusts token-level expert selection with the backbone and experts frozen, updating fewer than $0.6$M parameters ($<0.01\\%$ of the $8.8$B active parameters). Built from four Qwen3-VL-8B specialists, the complete UNITE model occupies $20.3$ GB, $1.16\\times$ the storage of one dense specialist and $59.6\\%$ below the uncompressed MoE. Across $22$ benchmarks and R2R Val-Unseen, UNITE matches six static merging methods in mean retention of best-specialist performance, leads all of them on Scan2Cap, ScanQA, and all four navigation metrics, and surpasses every source specialist on all five 3D scene understanding benchmarks (up to $+19.1$ on Scan2Cap) and on R2R navigation. Relative to the uncompressed MoE, factorization is nearly lossless on $21$ of $22$ benchmarks; the exception is VSI-Bench, where frame-count experiments suggest impaired use of cross-frame evidence.UNITE thus consolidates complementary embodied capabilities near single-model storage.",
+    "authors": [
+      "Tao Tao",
+      "Anke Tang",
+      "Enneng Yang",
+      "Zhi Hou",
+      "Xiaogang Wang",
+      "Dacheng Tao"
+    ],
+    "published": "2026-11-16T09:19:30Z",
+    "updated": "2026-11-16T09:19:30Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20767v1",
+    "html_url": "https://arxiv.org/html/2611.20767v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20767v1.pdf",
+    "matched_keywords": [
+      "3d"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20745v1",
+    "title": "A Seismic Foundation Model for Dense Feature Extraction",
+    "abstract": "Deep-learning-based seismic interpretation is constrained by scarce high-quality annotations, and most existing models are trained separately for individual tasks. We present SeisDFE, a 7B-parameter seismic foundation model for dense feature extraction, pretrained on 5.34 million 2D images derived from more than 500 seismic volumes. A three-stage pretraining strategy, combining discriminative self-supervised learning, Gram feature anchoring, and multi-resolution adaptation, improves feature discriminability while preserving spatial coherence. With its encoder frozen, SeisDFE supports seismic facies classification, salt detection, fault detection, and relative geologic time estimation. It outperforms existing seismic foundation models on all four tasks and a natural-image-pretrained model on all but fault detection, with the largest gains under scarce supervision: using only two annotated sections of the F3 dataset, it improves whole-volume mIoU by 12-19 percentage points over the baselines. The learned features remain effective with task-specific decoders and extend to synthetic-to-field transfer and sparse 3D geobody interpretation. These results show that large-scale seismic pretraining organizes geological information into dense representations that are directly reusable across interpretation tasks.",
+    "authors": [
+      "Zhixiang Guo",
+      "Xinming Wu",
+      "Yimin Dou",
+      "Hui Gao",
+      "Siyao Zhao",
+      "He Huang",
+      "Wei Liu"
+    ],
+    "published": "2026-11-16T08:51:23Z",
+    "updated": "2026-11-16T08:51:23Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20745v1",
+    "html_url": "https://arxiv.org/html/2611.20745v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20745v1.pdf",
+    "matched_keywords": [
+      "3d",
+      "representation"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20741v1",
+    "title": "Robotic Reward Models in the Foundation-Model Era",
+    "abstract": "Robotic reward models (RRMs) use foundation models to replace per-task reward engineering with reusable, task-conditioned evaluation. Yet under one name, their outputs answer different questions, from whether a task succeeded to which execution is better. This survey organizes 114 methods into five semantic families by the question their native outputs answer: Outcome, Absolute Progress, Relative, Temporal Value, and Hybrid. Within this taxonomy, we review how model design determines what an evaluator can judge, how raw experience becomes supervision, and how existing evaluation practice tests the result. The review exposes a gap: agreement with demonstration order and downstream policy gains do not show whether a reward tracks task fulfillment. We therefore introduce RRM-Bench-1K, 1,117 real-robot videos of closed-loop executions with task-state and camera-evidence labels, and four contrast suites that separate the credited condition from its usual cues. A unified study of 27 evaluators shows that the strongest final scores rank whole executions well enough for selection and filtering. Dense credit, however, follows the progression of an execution more closely than its task state, and no evaluator signals when the decisive view is missing. How much fidelity a reward model needs therefore depends on the decision it drives. We outline directions from real-failure supervision to metrics that separate task state from chronology, and open-source RRM-Hub, a toolbox in which 14 existing RRMs can be readily applied and new evaluators tested on the same capabilities.",
+    "authors": [
+      "Guoqiang Liang",
+      "Yiqi Lin",
+      "Shangchen Zhou",
+      "Wenzheng Zeng",
+      "Yanzhe Chen",
+      "Zechen Bai",
+      "Mike Zheng Shou"
+    ],
+    "published": "2026-11-16T08:45:20Z",
+    "updated": "2026-11-16T08:45:20Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20741v1",
+    "html_url": "https://arxiv.org/html/2611.20741v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20741v1.pdf",
+    "matched_keywords": [
+      "video"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20737v1",
+    "title": "CLIFT: Contrastive LiDAR Instance Features for 3D Pedestrian Tracking",
+    "abstract": "A social robot has to keep track of the people around it over time to plan its motion, a task handled by 3D multi-object tracking. For the LiDAR modality, trackers usually sit on top of a detector and link its detections across frames with a separate motion model or re-identification network. We instead show how a 3D LiDAR detector itself can be turned into a tracker by adding an instance-level contrastive objective on its intermediate voxel features. Each embedding is read from the voxels inside a detected box, and boxes are matched across frames by cosine similarity and the Hungarian algorithm, without a motion model. The detector backbone is fine-tuned together with this objective, which learns identity-aware features while leaving detection accuracy essen- tially intact. Because the method uses only the voxel features that Li- DAR detectors already produce, it is backbone-agnostic. On the JRDB 3D tracking leaderboard our LiDAR-only tracker ranks first on HOTA (38.58) and IDF1 (37.99), 13.04 and 9.30 points above the next pub- lished method, and second on MOTA and OSPA. Code is available at https://hermak56.github.io/CLIFT/.",
+    "authors": [
+      "German Devchich",
+      "Timur Akhtyamov",
+      "Denis Fatykhoph",
+      "Gonzalo Ferrer"
+    ],
+    "published": "2026-11-16T08:41:28Z",
+    "updated": "2026-11-16T08:41:28Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20737v1",
+    "html_url": "https://arxiv.org/html/2611.20737v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20737v1.pdf",
+    "matched_keywords": [
+      "3d",
+      "instance"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20730v1",
+    "title": "Selective Sensor Acquisition for Multimodal Place Recognition",
+    "abstract": "Multimodal Place Recognition (PR) can improve robustness, but most systems rigidly read and process every sensor for every query, even when the primary sensor is sufficient, with implications for energy consumption, second sensor update rate, and domain-specific considerations such as passive stealth. We introduce selective, controllable sensor acquisition, where a user specifies a desired second sensor usage rate and the system acquires the additional sensor only when the primary sensor's estimated performance is sufficiently poor. An online threshold adjustment achieves the requested usage rate by adapting to recent primary sensor performance, directing additional sensing towards queries where fusion is most likely to help without calibration specific to sensor modality, PR method, or environment. The approach requires only a PR method that produces a match score and applies to both single-frame and sequence-based PR. Our system, across multiple datasets, PR descriptors, and sensor combinations, recovers 55% of the available PR performance gain while using the second sensor on only 25% of queries, and 81% while using it on 50%. We further analyse alternative acquisition decision mechanisms and usage-rate control methods, and examine performance when the second sensor is stronger than, comparable to, or weaker than the primary sensor.",
+    "authors": [
+      "Margaux Edwards",
+      "Tobias Fischer",
+      "Michael Milford"
+    ],
+    "published": "2026-11-16T08:36:51Z",
+    "updated": "2026-11-16T08:36:51Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20730v1",
+    "html_url": "https://arxiv.org/html/2611.20730v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20730v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20704v1",
+    "title": "QASK-Edit: Adaptive Sparse Attention Across Queries and Key Sources for Efficient Video Editing",
+    "abstract": "Diffusion Transformers (DiTs) have achieved strong performance in generation based video editing, but suffer from high inference latency due to the long token sequences formed by conditioning inputs and generated videos. Although training-free sparse attention reduces this cost, existing methods typically apply a fixed retention ratio or a single threshold shared across all tokens. In this work, we view video editing as conditional generation and identify a key insight: attention demand varies significantly both across different key sources (e.g., source videos, reference images, audio, text, and generated videos) and across queries within each source. Motivated by this, we propose QASK-Edit (Query-Adaptive Sparsity over Key Sources for Video Editing), a training-free sparse attention framework that allocates computation independently for each query and key source. Specifically, for each query, QASK-Edit considers both the attention mass and approximation risk of each block. It then evaluates candidate routing thresholds against each key source's risk budget, choosing exact computation or approximations to dynamically adjust sparsity for each query. Extensive experiments on three video editing models demonstrate that QASK-Edit achieves up to $1.46\\times$ end-to-end speedup over dense attention pipeline while preserving both editing quality and unedited region fidelity. Furthermore, QASK-Edit generalizes directly to Reference-to-Video generation, delivering up to $1.36\\times$ speedup while maintaining generation quality.",
+    "authors": [
+      "Hengrui Liu",
+      "Wenbo Xu",
+      "Ziqi Sheng",
+      "Wei lu"
+    ],
+    "published": "2026-11-16T08:12:44Z",
+    "updated": "2026-11-16T08:12:44Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20704v1",
+    "html_url": "https://arxiv.org/html/2611.20704v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20704v1.pdf",
+    "matched_keywords": [
+      "video",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20703v1",
+    "title": "Efficient Multi-View Generation with Iterative Global-Local Proxy Attention",
+    "abstract": "Generating consistent multi-view RGB images and normal maps from a single input image provides complementary appearance and geometric cues for 3D reconstruction. However, maintaining cross-view consistency requires information exchange across viewpoints, and dense cross-view attention becomes computationally expensive as the number of views and spatial resolution increase. In this paper, we propose Global-Local Proxy Attention (GLPA) to reduce cross-view communication costs while preserving fine-grained within-view processing. Specifically, GLPA retains full-resolution interactions within each view and uses compact global proxies for cross-view communication. To further leverage the exchanged information, GLPA incorporates iterative proxy refinement, which rebuilds the proxies from updated features and reuses the same attention parameters for subsequent interactions within a single denoising step. We evaluate GLPA on two structurally different diffusion backbones, FLUX and Stable Diffusion. Experiments on FLUX show that GLPA achieves a $2.65\\times$ speedup in attention computation per denoising step over dense attention, while improving reconstruction IoU from 0.6849 to 0.7019 and reducing NVS LPIPS from 0.086 to 0.076. Results on Stable Diffusion further demonstrate the effectiveness of GLPA, with a $1.80\\times$ attention speedup and improvements across all five quality metrics.",
+    "authors": [
+      "Wei Tan",
+      "Kunming Luo",
+      "Hongyu Yan",
+      "Yu Zhang",
+      "Zihao Zhang",
+      "Xiatian Zhu",
+      "Lei Xie"
+    ],
+    "published": "2026-11-16T08:11:19Z",
+    "updated": "2026-11-16T08:11:19Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20703v1",
+    "html_url": "https://arxiv.org/html/2611.20703v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20703v1.pdf",
+    "matched_keywords": [
+      "3d",
+      "diffusion"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20688v1",
+    "title": "VIVID: A Visual Harness for Agentic Video Editing",
+    "abstract": "Video editing requires agents to make editing decisions grounded in audiovisual observations and precise temporal localization, and to evaluate their effects in rendered outputs. General-purpose coding agents possess strong comprehension, reasoning, and code execution capabilities, while media interaction and evidence management mechanisms tailored to video tasks can further unlock their editing potential. We introduce VIVID, a visual harness that supports multiple native coding agents in video post-production without additional model training. VIVID provides tools for on-demand video inspection, audio analysis, and transcription, and preserves observations alongside their corresponding media versions and temporal coordinates. Agents can actively retrieve these observations as they reason, perform edits using their native coding and shell tools, and inspect rendered outputs to guide subsequent revisions. On AgenticVBench, comprising 100 tasks across Assembly, Repair, Sequencing, and Repurpose, Codex with VIVID achieves an average score of 58.6%, an improvement of 20.2 percentage points over native Codex. The same harness also integrates with Claude Code and OpenCode, achieving average scores of 55.1% and 37.1%, respectively, both substantially exceeding their native baselines. These results highlight VIVID's potential as a reusable visual harness for extending the capabilities of general-purpose coding agents to video editing.",
+    "authors": [
+      "Wenhan Yu",
+      "Zhaoxi Zhang",
+      "Zhilong Tan",
+      "Weikang Li",
+      "Lei Sha"
+    ],
+    "published": "2026-11-16T07:52:01Z",
+    "updated": "2026-11-16T07:52:01Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20688v1",
+    "html_url": "https://arxiv.org/html/2611.20688v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20688v1.pdf",
+    "matched_keywords": [
+      "video",
+      "agent"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  },
+  {
+    "id": "2611.20653v1",
+    "title": "RAMP: Rethinking Multimodal Evaluation through Answer Readout Protocols",
+    "abstract": "Multimodal large language models (MLLMs) are often evaluated by converting model outputs into discrete answers. The conversion protocol determines which scores become predictions and can strongly influence the reported results. We introduce RAMP (Readout Aware Multimodal Protocol), a systematic framework that compares direct yes/no token logits, surface-form scores, and typed or reversed A/B interfaces under fixed model checkpoints and paired visual questions. On 500 POPE adversarial questions, typed versus bare readout changes accuracy by $-20.2$ percentage points for SmolVLM-256M, $-16.4$ for TinyLLaVA-1.1B, and $+1.8$ for Qwen2.5-VL-3B. Paired transitions reveal extensive prediction changes even when the net accuracy difference is small: 79 of 104 binary ChartQA items change correctness for SmolVLM-500M, despite a $+1.0$-point net difference. We further analyze prompt wording, candidate forms, option position, cross-task effects, and calibration. An independent offline replay reproduces 16,140 first-token decisions from saved raw scores with exact agreement. Our findings establish answer readout as a measurable component of multimodal evaluation and provide a reproducible protocol for analyzing model comparisons.",
+    "authors": [
+      "Jianye Zeng",
+      "Qiao Yikang",
+      "Duan Huang",
+      "Ziying Song"
+    ],
+    "published": "2026-11-16T07:10:31Z",
+    "updated": "2026-11-16T07:10:31Z",
+    "abstract_url": "https://arxiv.org/abs/2611.20653v1",
+    "html_url": "https://arxiv.org/html/2611.20653v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20653v1.pdf",
+    "matched_keywords": [
+      "multimodal"
+    ],
+    "source_used": "abstract",
+    "source_text_chars": 0,
+    "summary": null,
+    "first_seen_at": "2026-11-17T08:45:23+00:00",
+    "last_seen_at": "2026-11-17T08:45:23+00:00"
+  }
+]
